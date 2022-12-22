@@ -2,7 +2,6 @@ import styled from "styled-components";
 import logo from "../assets/images/logo-branco-grk.png";
 import logomeio from "../assets/images/logo-meio.png";
 import garrafa from "../assets/images/garrafa-home.png";
-import { AiOutlineFacebook } from "react-icons/ai";
 
 export default function HomePage() {
   return (
