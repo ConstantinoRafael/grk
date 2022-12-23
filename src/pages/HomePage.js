@@ -2,13 +2,14 @@ import styled from "styled-components";
 import logo from "../assets/images/logo-branco-grk.png";
 import logomeio from "../assets/images/logo-meio.png";
 import garrafa from "../assets/images/garrafa-home.png";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
     <Home>
       <Header>
         <p>a grk</p>
-        <p>vinhos</p>
+        <Link to={"/vinhos"}><p>vinhos</p></Link>
         <img src={logo} alt="logo grk" />
         <p>destilados</p>
         <p>contato</p>
@@ -86,6 +87,10 @@ const Header = styled.div`
   p {
     color: #ffffff;
     font-size: 24px;
+  }
+
+  a{
+    text-decoration: none;
   }
 `;
 
