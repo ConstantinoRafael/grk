@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/images/logo-branco-grk.png";
 import { products } from "../constants/BD";
@@ -9,7 +10,7 @@ export default function WinesPage() {
   return (
     <Wines>
       <Header>
-        <p>a grk</p>
+        <Link to={"/"}><p>a grk</p></Link>
         <p>vinhos</p>
         <img src={logo} alt="logo grk" />
         <p>destilados</p>
@@ -83,6 +84,10 @@ const Header = styled.div`
   p {
     color: #ffffff;
     font-size: 24px;
+  }
+
+  a{
+    text-decoration: none;
   }
 `;
 
