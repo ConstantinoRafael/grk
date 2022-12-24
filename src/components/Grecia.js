@@ -53,7 +53,7 @@ const EachWine = styled.div`
   }
 
   p {
-    font-size: 15px;
+    font-size: 20px;
     color: #736357;
   }
 `;

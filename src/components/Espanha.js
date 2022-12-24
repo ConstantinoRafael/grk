@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export default function Espanha({ espanhaList }) {
-
   return (
     <>
       <LinhaHorizontal></LinhaHorizontal>
@@ -54,7 +53,7 @@ const EachWine = styled.div`
   }
 
   p {
-    font-size: 15px;
+    font-size: 20px;
     color: #736357;
   }
 `;

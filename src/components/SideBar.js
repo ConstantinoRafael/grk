@@ -21,7 +21,7 @@ export default function SideBar({
   function showEspanha() {
     setGreciaList([]);
     setPortugalList([]);
-    setEspanhaList([espanhaVinhos]);
+    setEspanhaList(espanhaVinhos);
   }
 
   return (
@@ -61,6 +61,51 @@ export default function SideBar({
           </div>
         </Form>
       </Paises>
+      <TiposDeVinho>
+        <h1>Tipos de Vinho</h1>
+        <Form>
+          <div>
+            <input
+              id="branco"
+              type="radio"
+              name="Tipos de Vinhos"
+              value="Grécia"
+              onChange={showGrecia}
+            ></input>
+            <label htmlFor="branco">Grécia</label>
+          </div>
+          <div>
+            <input
+              id="rose"
+              type="radio"
+              name="Tipos de Vinhos"
+              value="Portugal"
+              onChange={showPortugal}
+            ></input>
+            <label htmlFor="rose">Portugal</label>
+          </div>
+          <div>
+            <input
+              id="tinto"
+              type="radio"
+              name="Tipos de Vinhos"
+              value="Espanha"
+              onChange={showEspanha}
+            ></input>
+            <label htmlFor="tinto">Espanha</label>
+          </div>
+          <div>
+            <input
+              id="espumante"
+              type="radio"
+              name="Tipos de Vinhos"
+              value="Espanha"
+              onChange={showEspanha}
+            ></input>
+            <label htmlFor="espumante">Espanha</label>
+          </div>
+        </Form>
+      </TiposDeVinho>
     </>
   );
 }
@@ -75,3 +120,5 @@ const Form = styled.form`
     display: flex;
   }
 `;
+
+const TiposDeVinho = styled.div``;

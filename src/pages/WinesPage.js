@@ -84,7 +84,7 @@ const WineList = styled.div`
 const SideBarDiv = styled.div`
   height: auto;
   width: 800px;
-  background-color: silver;
+  background-color: #e1ecf4;
 `;
 
 const PaisList = styled.div`

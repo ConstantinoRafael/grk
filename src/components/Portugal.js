@@ -1,7 +1,7 @@
 import styled from "styled-components";
 //import { portugalList } from "../constants/BD";
 
-export default function Portugal({portugalList}) {
+export default function Portugal({ portugalList }) {
   return (
     <>
       <LinhaHorizontal></LinhaHorizontal>
@@ -17,12 +17,12 @@ export default function Portugal({portugalList}) {
         cada taça.
       </h2>
       <PhotosList>
-        {portugalList.map((p) => (
-          <div key={p.id}>
-          <EachWine>
-            <img  src={p.image} alt="foto da garrafa" />
-            <p>{p.nome}</p>
-          </EachWine>
+        {portugalList.map((p,i) => (
+          <div key={i}>
+            <EachWine>
+              <img src={p.image} alt="foto da garrafa" />
+              <p>{p.nome}</p>
+            </EachWine>
           </div>
         ))}
       </PhotosList>
@@ -54,7 +54,7 @@ const EachWine = styled.div`
   }
 
   p {
-    font-size: 15px;
+    font-size: 20px;
     color: #736357;
   }
 `;
