@@ -24,6 +24,42 @@ export default function SideBar({
     setEspanhaList(espanhaVinhos);
   }
 
+  function showBranco() {
+    const grecia = greciaVinhos.filter((g) => g.tipo === "branco");
+    setGreciaList(grecia);
+    const portugal = portugalVinhos.filter((p) => p.tipo === "branco");
+    setPortugalList(portugal);
+    const espanha = espanhaVinhos.filter((e) => e.tipo === "branco");
+    setEspanhaList(espanha);
+  }
+
+  function showRose() {
+    const grecia = greciaVinhos.filter((g) => g.tipo === "rose");
+    setGreciaList(grecia);
+    const portugal = portugalVinhos.filter((p) => p.tipo === "rose");
+    setPortugalList(portugal);
+    const espanha = espanhaVinhos.filter((e) => e.tipo === "rose");
+    setEspanhaList(espanha);
+  }
+
+  function showTinto() {
+    const grecia = greciaVinhos.filter((g) => g.tipo === "tinto");
+    setGreciaList(grecia);
+    const portugal = portugalVinhos.filter((p) => p.tipo === "tinto");
+    setPortugalList(portugal);
+    const espanha = espanhaVinhos.filter((e) => e.tipo === "tinto");
+    setEspanhaList(espanha);
+  }
+
+  function showEspumante() {
+    const grecia = greciaVinhos.filter((g) => g.tipo === "espumante");
+    setGreciaList(grecia);
+    const portugal = portugalVinhos.filter((p) => p.tipo === "espumante");
+    setPortugalList(portugal);
+    const espanha = espanhaVinhos.filter((e) => e.tipo === "espumante");
+    setEspanhaList(espanha);
+  }
+
   return (
     <>
       <Paises>
@@ -69,40 +105,40 @@ export default function SideBar({
               id="branco"
               type="radio"
               name="Tipos de Vinhos"
-              value="Grécia"
-              onChange={showGrecia}
+              value="branco"
+              onChange={showBranco}
             ></input>
-            <label htmlFor="branco">Grécia</label>
+            <label htmlFor="branco">Branco</label>
           </div>
           <div>
             <input
               id="rose"
               type="radio"
               name="Tipos de Vinhos"
-              value="Portugal"
-              onChange={showPortugal}
+              value="rose"
+              onChange={showRose}
             ></input>
-            <label htmlFor="rose">Portugal</label>
+            <label htmlFor="rose">Rosé</label>
           </div>
           <div>
             <input
               id="tinto"
               type="radio"
               name="Tipos de Vinhos"
-              value="Espanha"
-              onChange={showEspanha}
+              value="tinto"
+              onChange={showTinto}
             ></input>
-            <label htmlFor="tinto">Espanha</label>
+            <label htmlFor="tinto">Tinto</label>
           </div>
           <div>
             <input
               id="espumante"
               type="radio"
               name="Tipos de Vinhos"
-              value="Espanha"
-              onChange={showEspanha}
+              value="espumante"
+              onChange={showEspumante}
             ></input>
-            <label htmlFor="espumante">Espanha</label>
+            <label htmlFor="espumante">Espumante</label>
           </div>
         </Form>
       </TiposDeVinho>
