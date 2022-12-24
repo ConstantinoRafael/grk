@@ -322,6 +322,7 @@ export const greciaVinhos = [
     pais: "Grécia",
     produtora: "Domaine Costa Lazaridi",
     região: "",
+    uvas: "",
     desc: "Usando as melhores técnicas em destilaria, criou-se um genuíno licor Idoniko, proveniente do bagaço das uvas. Num destilação múltipla realizada em alambiques de cobre, resulta num aroma delicado.",
     harmonizacao:
       "Com aperitivos em geral e até peixes defumados e ovas. Aprecie-o gelado, de preferência sem gelo.",
@@ -336,6 +337,7 @@ export const greciaVinhos = [
     pais: "Grécia",
     produtora: "Domaine Costa Lazaridi",
     região: "",
+    uvas: "",
     desc: "Oferece aos consumidores uma experiência excepcional, por ser um Ouzo de alta qualidade e personalidade. Seu processo é o mais lente e de maior valor, com 100% da destilação em alambiques de cobre, diferente do usual.",
     harmonizacao:
       "CCom aperitivos, com sobremesas refrescantes à base de frutas e para finalizar uma boa refeição.",

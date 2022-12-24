@@ -6,6 +6,23 @@ export default function SideBar({
   setPortugalList,
   setEspanhaList,
 }) {
+  console.log(greciaVinhos[0].uvas.includes("Chardonnay"));
+
+  const chardonnayList = greciaVinhos.filter((g) =>
+    g.uvas.includes("Chardonnay")
+  );
+  console.log(chardonnayList);
+
+  // for (let i = 0; i < greciaVinhos.length; i++) {
+  //   const chardonnayList = []
+  //   if(greciaVinhos[i].uvas.includes("Chardonnay")) {
+  //     chardonnayList.push(greciaVinhos[i])
+
+  //   }
+
+  //   console.log(chardonnayList)
+  // }
+
   function showGrecia() {
     setGreciaList(greciaVinhos);
     setPortugalList([]);
@@ -60,6 +77,8 @@ export default function SideBar({
     setEspanhaList(espanha);
   }
 
+  function showUva() {}
+
   return (
     <>
       <Paises>
@@ -69,7 +88,7 @@ export default function SideBar({
             <input
               id="grecia"
               type="radio"
-              name="País"
+              name="vinhos"
               value="Grécia"
               onChange={showGrecia}
             ></input>
@@ -79,7 +98,7 @@ export default function SideBar({
             <input
               id="portugal"
               type="radio"
-              name="País"
+              name="vinhos"
               value="Portugal"
               onChange={showPortugal}
             ></input>
@@ -89,15 +108,56 @@ export default function SideBar({
             <input
               id="espanha"
               type="radio"
-              name="País"
+              name="vinhos"
               value="Espanha"
               onChange={showEspanha}
             ></input>
             <label htmlFor="espanha">Espanha</label>
           </div>
+          <h1>Tipos de Vinho</h1>
+          <div>
+            <input
+              id="branco"
+              type="radio"
+              name="vinhos"
+              value="branco"
+              onChange={showBranco}
+            ></input>
+            <label htmlFor="branco">Branco</label>
+          </div>
+          <div>
+            <input
+              id="rose"
+              type="radio"
+              name="vinhos"
+              value="rose"
+              onChange={showRose}
+            ></input>
+            <label htmlFor="rose">Rosé</label>
+          </div>
+          <div>
+            <input
+              id="tinto"
+              type="radio"
+              name="vinhos"
+              value="tinto"
+              onChange={showTinto}
+            ></input>
+            <label htmlFor="tinto">Tinto</label>
+          </div>
+          <div>
+            <input
+              id="espumante"
+              type="radio"
+              name="vinhos"
+              value="espumante"
+              onChange={showEspumante}
+            ></input>
+            <label htmlFor="espumante">Espumante</label>
+          </div>
         </Form>
       </Paises>
-      <TiposDeVinho>
+      {/* <TiposDeVinho>
         <h1>Tipos de Vinho</h1>
         <Form>
           <div>
@@ -141,12 +201,25 @@ export default function SideBar({
             <label htmlFor="espumante">Espumante</label>
           </div>
         </Form>
-      </TiposDeVinho>
+      </TiposDeVinho> */}
+      <TiposDeUva></TiposDeUva>
     </>
   );
 }
 
-const Paises = styled.div``;
+const Paises = styled.div`
+  padding: 0px 20px;
+
+  h1{
+    font-size: 25px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+  }
+
+  label{
+    padding: 5px;
+  }
+`;
 
 const Form = styled.form`
   display: flex;
@@ -158,3 +231,5 @@ const Form = styled.form`
 `;
 
 const TiposDeVinho = styled.div``;
+
+const TiposDeUva = styled.div``;

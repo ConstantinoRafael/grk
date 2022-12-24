@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Espanha({ espanhaList }) {
   return (
-    <>
+    <EspanhaParte>
       <LinhaHorizontal></LinhaHorizontal>
       <h1>Espanha</h1>
       <LinhaHorizontal></LinhaHorizontal>
@@ -20,14 +20,19 @@ export default function Espanha({ espanhaList }) {
           <div key={i}>
             <EachWine>
               <img src={e.image} alt="foto da garrafa" />
-              <p>{e.nome}</p>
+              <Subtitle>
+                <p>{e.nome}</p>
+              </Subtitle>
             </EachWine>
           </div>
         ))}
       </PhotosList>
-    </>
+    </EspanhaParte>
   );
 }
+const EspanhaParte = styled.div`
+  margin-top: 20px;
+`;
 
 const LinhaHorizontal = styled.div`
   height: 2px;
@@ -45,7 +50,8 @@ const EachWine = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 200px;
+  height: 500px;
   margin-right: 10px;
   margin-bottom: 10px;
   &:hover {
@@ -53,7 +59,17 @@ const EachWine = styled.div`
   }
 
   p {
-    font-size: 20px;
+    font-size: 15px;
     color: #736357;
   }
+
+  img {
+    height: 470px;
+  }
+`;
+
+const Subtitle = styled.div`
+  height: 30px;
+  margin: auto;
+  text-align: center;
 `;

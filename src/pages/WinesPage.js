@@ -28,9 +28,12 @@ export default function WinesPage() {
       <WineList>
         <SideBarDiv>
           <SideBar
+            greciaList={greciaList}
             setGreciaList={setGreciaList}
+            portugalList={portugalList}
             setPortugalList={setPortugalList}
-            setEspanhaList = {setEspanhaList}
+            espanhaList={espanhaList}
+            setEspanhaList={setEspanhaList}
           />
         </SideBarDiv>
         <PaisList>
@@ -83,18 +86,18 @@ const WineList = styled.div`
 
 const SideBarDiv = styled.div`
   height: auto;
-  width: 800px;
+  width: 20vw;
   background-color: #e1ecf4;
 `;
 
 const PaisList = styled.div`
+  width: 80vw;
+  margin: 0px 20px;
   display: flex;
   flex-direction: column;
 `;
 
 const PaisWines = styled.div`
-  margin: 20px 20px;
-
   h1 {
     font-size: 60px;
     margin: 5px 0px;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function Portugal({ portugalList }) {
   return (
-    <>
+    <PortugalParte>
       <LinhaHorizontal></LinhaHorizontal>
       <h1>Portugal</h1>
       <LinhaHorizontal></LinhaHorizontal>
@@ -17,18 +17,23 @@ export default function Portugal({ portugalList }) {
         cada taça.
       </h2>
       <PhotosList>
-        {portugalList.map((p,i) => (
+        {portugalList.map((p, i) => (
           <div key={i}>
             <EachWine>
               <img src={p.image} alt="foto da garrafa" />
-              <p>{p.nome}</p>
+              <Subtitle>
+                <p>{p.nome}</p>
+              </Subtitle>
             </EachWine>
           </div>
         ))}
       </PhotosList>
-    </>
+    </PortugalParte>
   );
 }
+const PortugalParte = styled.div`
+  margin-top: 20px;
+`;
 
 const LinhaHorizontal = styled.div`
   height: 2px;
@@ -46,7 +51,8 @@ const EachWine = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 200px;
+  height: 500px;
   margin-right: 10px;
   margin-bottom: 10px;
   &:hover {
@@ -54,7 +60,17 @@ const EachWine = styled.div`
   }
 
   p {
-    font-size: 20px;
+    font-size: 15px;
     color: #736357;
   }
+
+  img {
+    height: 470px;
+  }
+`;
+
+const Subtitle = styled.div`
+  height: 30px;
+  margin: auto;
+  text-align: center;
 `;
