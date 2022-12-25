@@ -90,23 +90,23 @@ export default function SideBarMobile({
             {menuVinhos === true ? (
               <Opcoes>
                 <h1>País</h1>
-                <Opcao onClick={() => setTimeout(showGrecia, 300)}>
+                <Opcao onClick={() => setTimeout(showGrecia, 100)}>
                   Grécia
                 </Opcao>
-                <Opcao onClick={() => setTimeout(showPortugal, 300)}>
+                <Opcao onClick={() => setTimeout(showPortugal, 100)}>
                   Portugal
                 </Opcao>
-                <Opcao onClick={() => setTimeout(showEspanha, 300)}>
+                <Opcao onClick={() => setTimeout(showEspanha, 100)}>
                   Espanha
                 </Opcao>
 
                 <h1>Tipo de Vinho</h1>
-                <Opcao onClick={() => setTimeout(showBranco, 300)}>
+                <Opcao onClick={() => setTimeout(showBranco, 100)}>
                   Branco
                 </Opcao>
-                <Opcao onClick={() => setTimeout(showRose, 300)}>Rosé</Opcao>
-                <Opcao onClick={() => setTimeout(showTinto, 300)}>Tinto</Opcao>
-                <Opcao onClick={() => setTimeout(showEspumante, 300)}>
+                <Opcao onClick={() => setTimeout(showRose, 100)}>Rosé</Opcao>
+                <Opcao onClick={() => setTimeout(showTinto, 100)}>Tinto</Opcao>
+                <Opcao onClick={() => setTimeout(showEspumante, 100)}>
                   Espumante
                 </Opcao>
                 {/* <Form>
@@ -281,7 +281,7 @@ const Opcao = styled.div`
   padding: 5px 0px 5px 30px;
 
   &:hover {
-    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+    box-shadow: 0 0 5px rgba(33, 33, 33, 0.2);
   }
 `;
 
