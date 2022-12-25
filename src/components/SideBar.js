@@ -6,12 +6,12 @@ export default function SideBar({
   setPortugalList,
   setEspanhaList,
 }) {
-  console.log(greciaVinhos[0].uvas.includes("Chardonnay"));
+  // console.log(greciaVinhos[0].uvas.includes("Chardonnay"));
 
-  const chardonnayList = greciaVinhos.filter((g) =>
-    g.uvas.includes("Chardonnay")
-  );
-  console.log(chardonnayList);
+  // const chardonnayList = greciaVinhos.filter((g) =>
+  //   g.uvas.includes("Chardonnay")
+  // );
+  // console.log(chardonnayList);
 
   // for (let i = 0; i < greciaVinhos.length; i++) {
   //   const chardonnayList = []
@@ -208,16 +208,17 @@ export default function SideBar({
 }
 
 const Paises = styled.div`
-  padding: 0px 20px;
+  margin: 0px 20px;
 
   h1{
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 5px;
     margin-top: 20px;
   }
 
   label{
-    padding: 5px;
+    font-size: 20px;
+    margin: 5px;
   }
 `;
 

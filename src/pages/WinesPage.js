@@ -1,29 +1,45 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../assets/images/logo-branco-grk.png";
 import Espanha from "../components/Espanha";
 import Grecia from "../components/Grecia";
+import Header from "../components/Header";
+import HeaderMobile from "../components/HeaderMobile";
 import Portugal from "../components/Portugal";
 import SideBar from "../components/SideBar";
+import SideBarMobile from "../components/SideBarMobile";
 import { espanhaVinhos, greciaVinhos, portugalVinhos } from "../constants/BD";
 
 export default function WinesPage() {
   const [greciaList, setGreciaList] = useState(greciaVinhos);
   const [portugalList, setPortugalList] = useState(portugalVinhos);
   const [espanhaList, setEspanhaList] = useState(espanhaVinhos);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <Wines>
-      <Header>
-        <Link to={"/"}>
-          <p>a grk</p>
-        </Link>
-        <p>vinhos</p>
-        <img src={logo} alt="logo grk" />
-        <p>destilados</p>
-        <p>contato</p>
-      </Header>
+      <HeaderDiv>
+        <Header />
+      </HeaderDiv>
+
+      <HeaderDivMobile>
+        <HeaderMobile setShowMenu={setShowMenu} />
+      </HeaderDivMobile>
+      {showMenu ? (
+        <SideBarMobileDiv>
+          <SideBarMobile
+            greciaList={greciaList}
+            setGreciaList={setGreciaList}
+            portugalList={portugalList}
+            setPortugalList={setPortugalList}
+            espanhaList={espanhaList}
+            setEspanhaList={setEspanhaList}
+            setShowMenu={setShowMenu}
+          />
+        </SideBarMobileDiv>
+      ) : (
+        ""
+      )}
 
       <WineList>
         <SideBarDiv>
@@ -36,6 +52,7 @@ export default function WinesPage() {
             setEspanhaList={setEspanhaList}
           />
         </SideBarDiv>
+
         <PaisList>
           <PaisWines>
             {greciaList.length !== 0 ? <Grecia greciaList={greciaList} /> : ""}
@@ -62,21 +79,15 @@ export default function WinesPage() {
 
 const Wines = styled.div``;
 
-const Header = styled.div`
-  height: 300px;
-  width: auto;
-  background-color: #68b0d4;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  p {
-    color: #ffffff;
-    font-size: 24px;
+const HeaderDiv = styled.div`
+  @media (max-width: 768px) {
+    display: none;
   }
+`;
 
-  a {
-    text-decoration: none;
+const HeaderDivMobile = styled.div`
+  @media (min-width: 769px) {
+    display: none;
   }
 `;
 
@@ -86,15 +97,25 @@ const WineList = styled.div`
 
 const SideBarDiv = styled.div`
   height: auto;
-  width: 20vw;
+  width: 15%;
   background-color: #e1ecf4;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
+const SideBarMobileDiv = styled.div``;
+
 const PaisList = styled.div`
-  width: 80vw;
+  width: 85%;
   margin: 0px 20px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const PaisWines = styled.div`
