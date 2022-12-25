@@ -279,6 +279,10 @@ const Opcao = styled.div`
   color: #736357;
   font-size: 20px;
   padding: 5px 0px 5px 30px;
+
+  &:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  }
 `;
 
 const Form = styled.form`
