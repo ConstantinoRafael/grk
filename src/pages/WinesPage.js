@@ -80,13 +80,13 @@ export default function WinesPage() {
 const Wines = styled.div``;
 
 const HeaderDiv = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 950px) {
     display: none;
   }
 `;
 
 const HeaderDivMobile = styled.div`
-  @media (min-width: 769px) {
+  @media (min-width: 950px) {
     display: none;
   }
 `;
@@ -100,7 +100,7 @@ const SideBarDiv = styled.div`
   width: 15%;
   background-color: #e1ecf4;
 
-  @media (max-width: 768px) {
+  @media (max-width: 950px) {
     display: none;
   }
 `;
@@ -113,7 +113,7 @@ const PaisList = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (max-width: 950px) {
     width: 100%;
   }
 `;
