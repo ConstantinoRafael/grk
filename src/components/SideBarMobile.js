@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import logoAzul from "../assets/images/logo-azul.png";
 import { espanhaVinhos, greciaVinhos, portugalVinhos } from "../constants/BD";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp, IoIosClose } from "react-icons/io";
 import { useState } from "react";
 
 export default function SideBarMobile({
@@ -79,12 +79,13 @@ export default function SideBarMobile({
       <Menu>
         <PrimeiraLinha>
           <img src={logoAzul} alt="logo grk" />
+          <IoIosClose onClick={() => setShowMenu(false)} />
         </PrimeiraLinha>
 
         <OpcoesMenu>
           <Secao>
             <TituloOpcoes onClick={() => setMenuVinhos(!menuVinhos)}>
-              <p>Vinhos</p>
+              <p>vinhos</p>
               {menuVinhos === false ? <IoIosArrowDown /> : <IoIosArrowUp />}
             </TituloOpcoes>
             {menuVinhos === true ? (
@@ -189,12 +190,12 @@ export default function SideBarMobile({
           </Secao>
           <Secao>
             <TituloOpcoes>
-              <p>Destilados</p>
+              <p>destilados</p>
               <IoIosArrowDown />
             </TituloOpcoes>
           </Secao>
           <Secao>
-            <TituloOpcoes>Contato</TituloOpcoes>
+            <TituloOpcoes>contato</TituloOpcoes>
           </Secao>
         </OpcoesMenu>
       </Menu>
@@ -229,10 +230,16 @@ const Menu = styled.div`
 
 const PrimeiraLinha = styled.div`
   display: flex;
-  justify-content: center;
-  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  color: #17536f;
+  font-size: 50px;
+  margin-right: 10px;
 
   img {
+    max-height: 60px;
+    width: auto;
     margin: auto;
   }
 `;
@@ -258,12 +265,13 @@ const TituloOpcoes = styled.div`
 `;
 
 const Opcoes = styled.div`
-  margin: 0px 20px 20px 20px;
+  padding: 0px 20px 20px 20px;
+  background-color: #f2f3f4;
 
   h1 {
     font-size: 25px;
     margin-bottom: 10px;
-    margin-top: 20px;
+    padding-top: 20px;
   }
 
   label {
@@ -285,11 +293,11 @@ const Opcao = styled.div`
   }
 `;
 
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
+// const Form = styled.form`
+//   display: flex;
+//   flex-direction: column;
 
-  div {
-    display: flex;
-  }
-`;
+//   div {
+//     display: flex;
+//   }
+// `;

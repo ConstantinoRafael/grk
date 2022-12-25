@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Espanha from "../components/Espanha";
 import Grecia from "../components/Grecia";
@@ -80,13 +80,13 @@ export default function WinesPage() {
 const Wines = styled.div``;
 
 const HeaderDiv = styled.div`
-  @media (max-width: 950px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
 
 const HeaderDivMobile = styled.div`
-  @media (min-width: 950px) {
+  @media (min-width: 769px) {
     display: none;
   }
 `;
@@ -100,7 +100,7 @@ const SideBarDiv = styled.div`
   width: 15%;
   background-color: #e1ecf4;
 
-  @media (max-width: 950px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -113,7 +113,7 @@ const PaisList = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 950px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -130,5 +130,16 @@ const PaisWines = styled.div`
     font-size: 24px;
     margin-bottom: 20px;
     line-height: 35px;
+  }
+
+  @media (max-width: 768px) {
+    h1{
+      font-size: 39px;
+    }
+
+    h2{
+      font-size: 13px;
+      line-height: 23px;
+    }
   }
 `;

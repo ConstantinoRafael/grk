@@ -38,6 +38,11 @@ const LinhaHorizontal = styled.div`
   height: 2px;
   width: 160px;
   background-color: #000000;
+
+@media (max-width: 768px) {
+  width: 102px;
+}
+  
 `;
 
 const PhotosList = styled.div`
@@ -66,10 +71,27 @@ const EachWine = styled.div`
   img{
     height: 470px;
   }
+
+  @media (max-width: 768px) {
+    width:130px;
+    height: 325px;
+
+    img{
+      height: 305px;
+    }
+
+    p {
+      font-size: 10px;
+    }
+  }
 `;
 
 const Subtitle = styled.div`
   height: 30px;
   margin: auto;
   text-align: center;
+
+  @media (max-width: 768px;) {
+    height: 20px;
+  }
 `

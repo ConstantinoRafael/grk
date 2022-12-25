@@ -81,156 +81,72 @@ export default function SideBar({
 
   return (
     <>
-      <Paises>
-        <h1>País</h1>
-        <Form>
-          <div>
-            <input
-              id="grecia"
-              type="radio"
-              name="vinhos"
-              value="Grécia"
-              onChange={showGrecia}
-            ></input>
-            <label htmlFor="grecia">Grécia</label>
-          </div>
-          <div>
-            <input
-              id="portugal"
-              type="radio"
-              name="vinhos"
-              value="Portugal"
-              onChange={showPortugal}
-            ></input>
-            <label htmlFor="portugal">Portugal</label>
-          </div>
-          <div>
-            <input
-              id="espanha"
-              type="radio"
-              name="vinhos"
-              value="Espanha"
-              onChange={showEspanha}
-            ></input>
-            <label htmlFor="espanha">Espanha</label>
-          </div>
-          <h1>Tipos de Vinho</h1>
-          <div>
-            <input
-              id="branco"
-              type="radio"
-              name="vinhos"
-              value="branco"
-              onChange={showBranco}
-            ></input>
-            <label htmlFor="branco">Branco</label>
-          </div>
-          <div>
-            <input
-              id="rose"
-              type="radio"
-              name="vinhos"
-              value="rose"
-              onChange={showRose}
-            ></input>
-            <label htmlFor="rose">Rosé</label>
-          </div>
-          <div>
-            <input
-              id="tinto"
-              type="radio"
-              name="vinhos"
-              value="tinto"
-              onChange={showTinto}
-            ></input>
-            <label htmlFor="tinto">Tinto</label>
-          </div>
-          <div>
-            <input
-              id="espumante"
-              type="radio"
-              name="vinhos"
-              value="espumante"
-              onChange={showEspumante}
-            ></input>
-            <label htmlFor="espumante">Espumante</label>
-          </div>
-        </Form>
-      </Paises>
-      {/* <TiposDeVinho>
-        <h1>Tipos de Vinho</h1>
-        <Form>
-          <div>
-            <input
-              id="branco"
-              type="radio"
-              name="Tipos de Vinhos"
-              value="branco"
-              onChange={showBranco}
-            ></input>
-            <label htmlFor="branco">Branco</label>
-          </div>
-          <div>
-            <input
-              id="rose"
-              type="radio"
-              name="Tipos de Vinhos"
-              value="rose"
-              onChange={showRose}
-            ></input>
-            <label htmlFor="rose">Rosé</label>
-          </div>
-          <div>
-            <input
-              id="tinto"
-              type="radio"
-              name="Tipos de Vinhos"
-              value="tinto"
-              onChange={showTinto}
-            ></input>
-            <label htmlFor="tinto">Tinto</label>
-          </div>
-          <div>
-            <input
-              id="espumante"
-              type="radio"
-              name="Tipos de Vinhos"
-              value="espumante"
-              onChange={showEspumante}
-            ></input>
-            <label htmlFor="espumante">Espumante</label>
-          </div>
-        </Form>
-      </TiposDeVinho> */}
-      <TiposDeUva></TiposDeUva>
+      <OpcoesMenu>
+        <Opcoes>
+          <h1>país</h1>
+          <Opcao onClick={() => setTimeout(showGrecia, 100)}>Grécia</Opcao>
+          <Opcao onClick={() => setTimeout(showPortugal, 100)}>Portugal</Opcao>
+          <Opcao onClick={() => setTimeout(showEspanha, 100)}>Espanha</Opcao>
+
+          <h1>tipo de vinho</h1>
+          <Opcao onClick={() => setTimeout(showBranco, 100)}>Branco</Opcao>
+          <Opcao onClick={() => setTimeout(showRose, 100)}>Rosé</Opcao>
+          <Opcao onClick={() => setTimeout(showTinto, 100)}>Tinto</Opcao>
+          <Opcao onClick={() => setTimeout(showEspumante, 100)}>
+            Espumante
+          </Opcao>
+          <h1>tipos de uva</h1>
+          <Opcao>Agiorgitiko</Opcao>
+          <Opcao>Aragonez</Opcao>
+          <Opcao>Arinto</Opcao>
+          <Opcao>Assyrtiko</Opcao>
+          <Opcao>Cabernet</Opcao>
+          <Opcao>Cabernet Sauvignon</Opcao>
+          <Opcao>Chardonnay</Opcao>
+          <Opcao>Malagouzia</Opcao>
+          <Opcao>Merlot</Opcao>
+          <Opcao>Moscato</Opcao>
+          <Opcao>Perellada</Opcao>
+          <Opcao>Petit Verdot</Opcao>
+          <Opcao>Sauvignon Blanc</Opcao>
+          <Opcao>Syrah</Opcao>
+          <Opcao>Tinta Rotiz</Opcao>
+          <Opcao>Touriga</Opcao>
+          <Opcao>Touriga Franca</Opcao>
+          <Opcao>Viognier</Opcao>
+          <Opcao>Verdelho</Opcao>
+          <Opcao>Vinhas Velhas</Opcao>
+          <Opcao>Xarel.lo</Opcao>
+
+        </Opcoes>
+      </OpcoesMenu>
     </>
   );
 }
 
-const Paises = styled.div`
-  margin: 0px 20px;
+const OpcoesMenu = styled.div`
+  height: 100%;
+  width: auto;
+`;
 
-  h1{
-    font-size: 30px;
-    margin-bottom: 5px;
-    margin-top: 20px;
-  }
+const Opcoes = styled.div`
+  padding: 0px 20px 20px 20px;
+  
 
-  label{
-    font-size: 20px;
-    margin: 5px;
+  h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding-top: 20px;
   }
 `;
 
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
+const Opcao = styled.div`
+  color: #736357;
+  font-size: 20px;
+  padding: 5px 0px 5px 20px;
+  cursor: pointer;
 
-  div {
-    display: flex;
+  &:hover {
+    box-shadow: 0 0 5px rgba(33, 33, 33, 0.2);
   }
 `;
-
-const TiposDeVinho = styled.div``;
-
-const TiposDeUva = styled.div``;
