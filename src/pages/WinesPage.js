@@ -8,9 +8,11 @@ import HeaderMobile from "../components/HeaderMobile";
 import Portugal from "../components/Portugal";
 import SideBar from "../components/SideBar";
 import SideBarMobile from "../components/SideBarMobile";
-import { espanhaVinhos, greciaVinhos, portugalVinhos } from "../constants/BD";
+import { espanhaVinhos, greciaVinhos, greciaVinhosDomaine, portugalVinhos } from "../constants/BD";
 
 export default function WinesPage() {
+  const [greciaListDomaine, setGreciaListDomaine] =
+    useState(greciaVinhosDomaine);
   const [greciaList, setGreciaList] = useState(greciaVinhos);
   const [portugalList, setPortugalList] = useState(portugalVinhos);
   const [espanhaList, setEspanhaList] = useState(espanhaVinhos);
@@ -28,6 +30,8 @@ export default function WinesPage() {
       {showMenu ? (
         <SideBarMobileDiv>
           <SideBarMobile
+            greciaListDomaine={greciaListDomaine}
+            setGreciaListDomaine={setGreciaListDomaine}
             greciaList={greciaList}
             setGreciaList={setGreciaList}
             portugalList={portugalList}
@@ -44,6 +48,8 @@ export default function WinesPage() {
       <WineList>
         <SideBarDiv>
           <SideBar
+            greciaListDomaine={greciaListDomaine}
+            setGreciaListDomaine={setGreciaListDomaine}
             greciaList={greciaList}
             setGreciaList={setGreciaList}
             portugalList={portugalList}
@@ -55,7 +61,14 @@ export default function WinesPage() {
 
         <PaisList>
           <PaisWines>
-            {greciaList.length !== 0 ? <Grecia greciaList={greciaList} /> : ""}
+            {greciaList.length !== 0 ? (
+              <Grecia
+                greciaListDomaine={greciaListDomaine}
+                greciaList={greciaList}
+              />
+            ) : (
+              ""
+            )}
           </PaisWines>
           <PaisWines>
             {portugalList.length !== 0 ? (
@@ -132,12 +145,16 @@ const PaisWines = styled.div`
     line-height: 35px;
   }
 
+  h3{
+    text-align: end;
+  }
+
   @media (max-width: 768px) {
-    h1{
+    h1 {
       font-size: 39px;
     }
 
-    h2{
+    h2 {
       font-size: 13px;
       line-height: 23px;
     }

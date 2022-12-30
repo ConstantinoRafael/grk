@@ -104,6 +104,232 @@ export const products = [
   },
 ];
 
+export const greciaVinhosDomaine = [
+  {
+    id: 1,
+    nome: "THALASSA WHITE",
+    url:"thalasse-white",
+    image: thalassaWhite,
+    tipo: "branco",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "Drama",
+    uvas: "100% Chardonnay",
+    safra: 2019,
+    harmonizacao: "Peixes grelhados, queijos brancos e saladas.",
+    notas:
+      "De coloração amarelo brilhante, aroma de frutas cítricas e tropicais com nuances florais. Na boca, toque macio e aveludado, boa acidez e final persistente.",
+  },
+  {
+    id: 2,
+    nome: "OKEANOS ASSYRTIKO CHARDONNAY",
+    url:"okeanos-assyrtiko-chardonnay",
+    image: okeanosAssyrtikoChardonnay,
+    tipo: "branco",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "PGI Drama",
+    uvas: "Assyrtiko, Chardonnay",
+    safra: 2019,
+    harmonizacao:
+      "Saladas, petiscos e pratos frescos ou grelhados à base de frutos do mar. Carpaccios e alguns embutidos também são boas opções.",
+    notas:
+      "De coloração amarelo palha brilhante com reflexos esverdeados. Aromas florais e de frutas cítricas, com toque mineral. Agradável acidez e frescor, com destaque para um sutil toque de nozes.",
+  },
+  {
+    id: 3,
+    nome: "OKEANOS SAUVIGNON BLANC-MOSCATO",
+    url:"okeanos-sauvignon-blanc-moscato",
+    image: okeanosSauvignonBlancMoscato,
+    tipo: "branco",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "PGI Drama",
+    uvas: "Sauvignon Blanc, Moscato",
+    safra: 2019,
+    harmonizacao:
+      "Saladas, pratos frios, peixes e frutos do mar grelhados. Pratos da culinária tailandesa, indiana e até mesmo japonesa, são boas opções. Excelente como aperitivo.",
+    notas:
+      "De coloração palha brilhante, com aroma frutados, indo do pêssego ao maracujá, com toques de casca de laranja e flores brancas. Na boca, acidez na medida certa, frutado e equilibrado.",
+  },
+  {
+    id: 4,
+    nome: "OENODEA WHITE",
+    url:"oenodea-white",
+    image: oenodeaWhite,
+    tipo: "branco",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "PGI Drama",
+    uvas: "50% Malagouzia, 25% Moscato, 25% Sauvignon Blanc",
+    safra: 2018,
+    harmonizacao:
+      "Pratos das culinárias indiana e tailandesa, além de saladas, peixes e frutos do mar.",
+    notas:
+      "De coloração amarelado claro, aroma de flores brancas, frutas amarelas, pêssego com sutil aroma cítrico. Paladar macio, redondo e com elegante acidez, e final longo e agradável.",
+  },
+  {
+    id: 5,
+    nome: "AMETHISTOS BLANC",
+    url:"amethistos-blanc",
+    image: amethistosBlanc,
+    tipo: "branco",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "PGI Drama",
+    uvas: "85% Sauvignon Blanc, 15% Assyrtiko",
+    safra: 2019,
+    harmonizacao:
+      "Saladas verdes, pequenos peixes fritos, frutos do mar e queijos (branco e queijo de cabra).",
+    notas:
+      "De coloração palha com refrexos verdes, aroma de frutas tropicais frescas. Agradável acidez, com paladar macio, redondo, com elegante acidez e final longo e agradável.",
+  },
+  {
+    id: 6,
+    nome: "AMETHISTOS SAUVIGNON BLANC",
+    url:"amethistos-sauvignon-blanc",
+    image: amethistosSauvignonBlanc,
+    tipo: "branco",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "PGI Drama",
+    uvas: "100% Sauvignon Blanc",
+    safra: "2018 - Barricada de 4 meses",
+    harmonizacao:
+      "Peixes grelhados, suflê de vegetais com ervas, sopa de peixe e frutos do mar.",
+    notas:
+      "De coloração amarelo claro com reflexos dourados. Aromas bastante complexos: frutado com toques florais, amanteigados com um fundo de baunilha. No paladar, frutas cítricas e tropicais, ótima acidez que o fazem um vinho equilibrado, complexo e elegante. Final persistente e prazeroso.",
+  },
+  {
+    id: 7,
+    nome: "DOMAINE COSTA LAZARIDI MALAGOUZIA",
+    url:"domaine-costa-lazaridi-malagouzia",
+    image: domaineCostaLazaridiMalagouzia,
+    tipo: "",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "Drama",
+    uvas: "100% Malagouzia",
+    safra: 2018,
+    harmonizacao:
+      "Pode ser bebido puro, como um excelente aperitivo, com saladas, pratos com frutas, carnes brancas com molho leve de ervas e pratos elaborados com queijos macios.",
+    notas:
+      "De coloração amarelho palha com reflexos verdeais, aroma complexos e intensos com muito cítrico, flores brancas e frutas amarelas, como pêssego e damasco. Ótima acidez, grande frescor e redondo, com final longo. Um vinho intenso e com personalidade.",
+  },
+  {
+    id: 8,
+    nome: "DOMAINE COSTA LAZARIDI ROSÉ",
+    url:"domaine-costa-lazaridi-rose",
+    image: domaineCostaLazaridiRose,
+    tipo: "rose",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "PGI Drama",
+    uvas: "Merlot, Grenache e Agiorgitiko",
+    safra: 2019,
+    harmonizacao:
+      "Vai muito bem com pratos frios, carpaccios, culinária japonesa, saladas com frutos do mar, rosbife de atum, peixes leves e legumes grelhados.",
+    notas:
+      "De coloração rosado claro e atraente, com aroma de frutas vermelhas e toques cítricos. Paladar refrescante, leve. Acidez correta, equilibrado, sutis toques de frutas vermelhas frescas, com elegante e agradável final.",
+  },
+  {
+    id: 9,
+    nome: "THALASSA RED",
+    url:"thalassa-red",
+    image: thalassaRed,
+    tipo: "",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "PGI Drama",
+    uvas: "100% Cabernet Sauvignon",
+    safra: "2017/2018",
+    harmonizacao:
+      "Carnes ensopadas, legumes recheados e massas com molho vermelho.",
+    notas:
+      "Coloração vermelho brilhante e profundo. Aroma intensamente frutado, com aromas de ameixas, verejas e framboesa e um toque de especiarias. No paladar, toque elegante de madeira e taninos macios.",
+  },
+  {
+    id: 10,
+    nome: "OKEANOS CABERNET MERLOT",
+    url:"okeanos-cabernet-merlot",
+    image: okeanosCabernetMerlot,
+    tipo: "",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "PGI Drama",
+    uvas: "Cabernet Sauvignon, Merlot",
+    safra: "2018",
+    harmonizacao:
+      "Carnes e legumes grelhados, guisados, pratos com molhos vermelhos, pizzas, alguns queijos como cheddar e gouda, além de embutidos.",
+    notas:
+      "De coloração vermelho vibrante e brilhante, com incrível leque aromático: cereja, groselha, framboesa, mirtilo e toques de especiarias. Paladar equilibrado, bom corpo e agradável final de boca.",
+  },
+  {
+    id: 11,
+    nome: "OENODEA RED",
+    url:"oenodea-red",
+    image: oenodeaRed,
+    tipo: "",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "PGI Drama",
+    uvas: "60% Cabernet Sauvignon, 20% Syrah, 20% Agiorgitiko",
+    safra: "2018",
+    harmonizacao:
+      "Abobrinhas recheadas com carne moída, carnes com molho vermelho.",
+    notas:
+      "De coloração rubi brilhantes e profundo. Frutado, com aromas de cerejas e framboesa e notas de especiarias. Bom corpo, com caráter bastante frutado, taninos macios, madeira elegante e equilibrado.",
+  },
+  {
+    id: 12,
+    nome: "DOMAINE COSTA LAZARIDI SYRAH",
+    url:"domaine-costa-lazaridi-syrah",
+    image: domaineCostaLazaridiSyrah,
+    tipo: "",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "Drama",
+    uvas: "100% Syrah",
+    safra: "2017",
+    harmonizacao:
+      "Ragus, carnes de caça, pato, ganso, peru, codorna, assados, grelhados e chilli de carne.",
+    notas:
+      "De coloração vermelho intenso com nuances de violeta. Aroma intenso e complexo, apresentando notas de especiarias, frutas vermelhas e chocolate. Paladar frutado, com toques de pimenta, ervas aromáticas, especiarias e um toque elegante e sutil de hortelã.",
+  },
+  {
+    id: 13,
+    nome: "OENOTRIA LAND",
+    url:"oenotria-land",
+    image: oenotriaLand,
+    tipo: "",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "Kapandriti",
+    uvas: "90% Cabernet Sauvignon, 10% Agiorgitiko",
+    safra: "2016",
+    harmonizacao:
+      "Cordeiro, guisado irlandês, carnes de caça e pratos com molhos vermelhos, densos e marcantes.",
+    notas:
+      "De coloração rubi brilhante e profundo. Aroma intensamente frutado de cerejas e framboesa e notas de especiarias. Paladar encorpado, aveludado, com intensa presença de frutas em campota e especiarias.",
+  },
+  {
+    id: 14,
+    nome: "AMETHISTOS CAVA",
+    url:"amethistos-cava",
+    image: amethistosCava,
+    tipo: "",
+    pais: "Grécia",
+    produtora: "Domaine Costa Lazaridi",
+    região: "Drama",
+    uvas: "100% Cabernet Franc",
+    safra: "2017",
+    harmonizacao:
+      "Cordeiro, grelhados com molhos à base de pimentas, ragus de carnes de caça e guisados com molhos densos e encorpados.",
+    notas:
+      "De coloração vemelho intenso com toques violáceos. Intenso e rico biquê aromático, com toques de frutas negras maduras, tabaco, madeira elegante, cacau e uma leve e bem-vinda lembrança de hortelã. Paladar de frutos maduros em compotas, seguido de toques apimentados e chocolate. Madeira presente e quilibrada.",
+  },
+];
+
 export const greciaVinhos = [
   {
     id: 1,

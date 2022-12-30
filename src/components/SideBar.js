@@ -77,7 +77,20 @@ export default function SideBar({
     setEspanhaList(espanha);
   }
 
-  function showUva() {}
+  function showAgiorgitiko() {
+    const agiogirtikoG = greciaVinhos.filter((g) =>
+      g.uvas.includes("Agiogirtiko")
+    );
+    setGreciaList(agiogirtikoG);
+    const agiogirtikoP = portugalVinhos.filter((g) =>
+      g.uvas.includes("Agiogirtiko")
+    );
+    setPortugalList(agiogirtikoP);
+    const agiogirtikoE = espanhaVinhos.filter((g) =>
+      g.uvas.includes("Agiogirtiko")
+    );
+    setEspanhaList(agiogirtikoE)
+  }
 
   return (
     <>
@@ -96,7 +109,7 @@ export default function SideBar({
             Espumante
           </Opcao>
           <h1>tipos de uva</h1>
-          <Opcao>Agiorgitiko</Opcao>
+          <Opcao onClick={() => showAgiorgitiko}>Agiorgitiko</Opcao>
           <Opcao>Aragonez</Opcao>
           <Opcao>Arinto</Opcao>
           <Opcao>Assyrtiko</Opcao>
@@ -117,7 +130,6 @@ export default function SideBar({
           <Opcao>Verdelho</Opcao>
           <Opcao>Vinhas Velhas</Opcao>
           <Opcao>Xarel.lo</Opcao>
-
         </Opcoes>
       </OpcoesMenu>
     </>
@@ -131,7 +143,6 @@ const OpcoesMenu = styled.div`
 
 const Opcoes = styled.div`
   padding: 0px 20px 20px 20px;
-  
 
   h1 {
     font-size: 25px;

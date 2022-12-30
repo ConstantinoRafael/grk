@@ -1,6 +1,10 @@
+
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export default function Grecia({ greciaList }) {
+export default function Grecia({ greciaList, greciaListDomaine }) {
+
+
   return (
     <GreciaParte>
       <LinhaHorizontal></LinhaHorizontal>
@@ -15,18 +19,23 @@ export default function Grecia({ greciaList }) {
         francesa, como a Cabernet Sauvignon e a Syrah, que se adaptaram muito
         bem aos diveros terroirs gregos.
       </h2>
+      <h3>Domaine Costa Lazaridi</h3>
       <PhotosList>
-        {greciaList.map((g, i) => (
+        {greciaListDomaine.map((g, i) => (
           <div key={i}>
+            <Link to={`/${g.url}`}>
             <EachWine>
               <img src={g.image} alt="foto da garrafa" />
               <Subtitle>
               <p>{g.nome}</p>
               </Subtitle>
             </EachWine>
+            </Link>
           </div>
         ))}
       </PhotosList>
+
+      <h3>Zacharias</h3>
     </GreciaParte>
   );
 }
