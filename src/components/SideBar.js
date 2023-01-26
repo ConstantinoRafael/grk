@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { espanhaVinhos, greciaVinhos, portugalVinhos } from "../constants/BD";
 
@@ -6,6 +7,7 @@ export default function SideBar({
   setPortugalList,
   setEspanhaList,
 }) {
+  const navigate = useNavigate();
   // console.log(greciaVinhos[0].uvas.includes("Chardonnay"));
 
   // const chardonnayList = greciaVinhos.filter((g) =>
@@ -24,6 +26,7 @@ export default function SideBar({
   // }
 
   function showGrecia() {
+    navigate("/vinhos");
     setGreciaList(greciaVinhos);
     setPortugalList([]);
     setEspanhaList([]);
@@ -89,7 +92,7 @@ export default function SideBar({
     const agiogirtikoE = espanhaVinhos.filter((g) =>
       g.uvas.includes("Agiogirtiko")
     );
-    setEspanhaList(agiogirtikoE)
+    setEspanhaList(agiogirtikoE);
   }
 
   return (
@@ -97,6 +100,7 @@ export default function SideBar({
       <OpcoesMenu>
         <Opcoes>
           <h1>país</h1>
+
           <Opcao onClick={() => setTimeout(showGrecia, 100)}>Grécia</Opcao>
           <Opcao onClick={() => setTimeout(showPortugal, 100)}>Portugal</Opcao>
           <Opcao onClick={() => setTimeout(showEspanha, 100)}>Espanha</Opcao>

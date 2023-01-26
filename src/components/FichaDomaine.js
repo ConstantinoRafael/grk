@@ -1,37 +1,41 @@
-import { useState } from "react";
-//import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useState } from "react";
+import { useParams } from "react-router-dom"
+import Header from "./Header.js"
 import Espanha from "../components/Espanha";
 import Grecia from "../components/Grecia";
-import Header from "../components/Header";
 import HeaderMobile from "../components/HeaderMobile";
 import Portugal from "../components/Portugal";
 import SideBar from "../components/SideBar";
 import SideBarMobile from "../components/SideBarMobile";
-import WhatsappButton from "../components/WhatsappButton";
 import { espanhaVinhos, greciaVinhos, greciaVinhosDomaine, greciaVinhosZacharias, portugalVinhos } from "../constants/BD";
 
-export default function WinesPage() {
-  const [greciaListDomaine, setGreciaListDomaine] =
+
+export default function FichaDomaine() {
+    const [greciaListDomaine, setGreciaListDomaine] =
     useState(greciaVinhosDomaine);
     const [greciaListZacharias, setGreciaListZacharias] =
     useState(greciaVinhosZacharias);
   const [greciaList, setGreciaList] = useState(greciaVinhos);
   const [portugalList, setPortugalList] = useState(portugalVinhos);
   const [espanhaList, setEspanhaList] = useState(espanhaVinhos);
-  const [showMenu, setShowMenu] = useState(false);
 
-  return (
-    <Wines>
-      <HeaderDiv>
+    const {name} = useParams();
+    const [showMenu, setShowMenu] = useState(false);
+
+    const vinho = greciaVinhosDomaine.filter((g) => (g.url === name))
+
+    
+
+
+    return <>
+    <HeaderDiv>
         <Header />
       </HeaderDiv>
 
       <HeaderDivMobile>
         <HeaderMobile setShowMenu={setShowMenu} />
       </HeaderDivMobile>
-
-      <WhatsappButton />
       {showMenu ? (
         <SideBarMobileDiv>
           <SideBarMobile
@@ -68,39 +72,12 @@ export default function WinesPage() {
           />
         </SideBarDiv>
 
-        <PaisList>
-          <PaisWines>
-            {greciaList.length !== 0 ? (
-              <Grecia
-                greciaListDomaine={greciaListDomaine}
-                greciaListZacharias={greciaListZacharias}
-                greciaList={greciaList}
-              />
-            ) : (
-              ""
-            )}
-          </PaisWines>
-          <PaisWines>
-            {portugalList.length !== 0 ? (
-              <Portugal portugalList={portugalList} />
-            ) : (
-              ""
-            )}
-          </PaisWines>
-          <PaisWines>
-            {espanhaList.length !== 0 ? (
-              <Espanha espanhaList={espanhaList} />
-            ) : (
-              ""
-            )}
-          </PaisWines>
-        </PaisList>
+        
+        
       </WineList>
-    </Wines>
-  );
+   
+    </>
 }
-
-const Wines = styled.div``;
 
 const HeaderDiv = styled.div`
   @media (max-width: 768px) {
@@ -138,35 +115,5 @@ const PaisList = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-  }
-`;
-
-const PaisWines = styled.div`
-  h1 {
-    font-size: 60px;
-    margin: 5px 0px;
-  }
-
-  h2 {
-    margin-top: 20px;
-    color: #736357;
-    font-size: 24px;
-    margin-bottom: 20px;
-    line-height: 35px;
-  }
-
-  h3{
-    text-align: end;
-  }
-
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 39px;
-    }
-
-    h2 {
-      font-size: 13px;
-      line-height: 23px;
-    }
   }
 `;

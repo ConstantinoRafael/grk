@@ -8,7 +8,9 @@ export default function Header() {
       <Link to={"/"}>
         <p>a grk</p>
       </Link>
+      <Link to={"/vinhos"}>
       <p>vinhos</p>
+      </Link>
       <img src={logo} alt="logo grk" />
       <p>destilados</p>
       <p>contato</p>

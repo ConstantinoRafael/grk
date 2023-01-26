@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export default function Grecia({ greciaList, greciaListDomaine }) {
+export default function Grecia({ greciaList, greciaListDomaine, greciaListZacharias }) {
 
 
   return (
@@ -23,7 +23,7 @@ export default function Grecia({ greciaList, greciaListDomaine }) {
       <PhotosList>
         {greciaListDomaine.map((g, i) => (
           <div key={i}>
-            <Link to={`/${g.url}`}>
+            <Link to={`/vinhos/${g.url}`}>
             <EachWine>
               <img src={g.image} alt="foto da garrafa" />
               <Subtitle>
@@ -36,6 +36,20 @@ export default function Grecia({ greciaList, greciaListDomaine }) {
       </PhotosList>
 
       <h3>Zacharias</h3>
+      <PhotosList>
+        {greciaListZacharias.map((g, i) => (
+          <div key={i}>
+            <Link to={`/${g.url}`}>
+            <EachWine>
+              <img src={g.image} alt="foto da garrafa" />
+              <Subtitle>
+              <p>{g.nome}</p>
+              </Subtitle>
+            </EachWine>
+            </Link>
+          </div>
+        ))}
+      </PhotosList>
     </GreciaParte>
   );
 }

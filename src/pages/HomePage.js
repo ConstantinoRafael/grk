@@ -3,17 +3,24 @@ import logo from "../assets/images/logo-branco-grk.png";
 import logomeio from "../assets/images/logo-meio.png";
 import garrafa from "../assets/images/garrafa-home.png";
 import { Link } from "react-router-dom";
+import {BsWhatsapp} from "react-icons/bs"
+import { useState } from "react";
+import Header from "../components/Header";
+import HeaderMobile from "../components/HeaderMobile";
+import WhatsappButton from "../components/WhatsappButton";
 
 export default function HomePage() {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <Home>
-      <Header>
-        <p>a grk</p>
-        <Link to={"/vinhos"}><p>vinhos</p></Link>
-        <img src={logo} alt="logo grk" />
-        <p>destilados</p>
-        <p>contato</p>
-      </Header>
+      <WhatsappButton />
+      <HeaderDiv>
+        <Header />
+      </HeaderDiv>
+
+      <HeaderDivMobile>
+        <HeaderMobile setShowMenu={setShowMenu} />
+      </HeaderDivMobile>
       <Body1>
         <h1>Os vinhos são a nossa paixão.</h1>
         <p>
@@ -36,9 +43,11 @@ export default function HomePage() {
             Vinhos especialmente selecionados que trazem o sabor dos seus países
             e regiões, além da sua cultura e estilo de vida.
           </p>
+          <Link to="/vinhos">
           <button>
             clique aqui para e conheça o mundo pelos vinhos da grk
           </button>
+          </Link>
         </div>
         <img src={garrafa} alt="garrafa" />
       </Body2>
@@ -76,21 +85,29 @@ export default function HomePage() {
 
 const Home = styled.div``;
 
-const Header = styled.div`
-  height: 300px;
-  width: auto;
-  background-color: #68b0d4;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 
-  p {
-    color: #ffffff;
-    font-size: 24px;
+
+const HeaderDiv = styled.div`
+  @media (max-width: 768px) {
+    display: none;
   }
+`;
 
-  a{
-    text-decoration: none;
+const SideBarDiv = styled.div`
+  height: auto;
+  width: 15%;
+  background-color: #e1ecf4;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const SideBarMobileDiv = styled.div``;
+
+const HeaderDivMobile = styled.div`
+  @media (min-width: 769px) {
+    display: none;
   }
 `;
 
