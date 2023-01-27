@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import logo from "../assets/images/logo-branco-grk.png";
 import logomeio from "../assets/images/logo-meio.png";
 import garrafa from "../assets/images/garrafa-home.png";
 import { Link } from "react-router-dom";
-import {BsWhatsapp} from "react-icons/bs"
 import { useState } from "react";
 import Header from "../components/Header";
 import HeaderMobile from "../components/HeaderMobile";
@@ -85,25 +83,11 @@ export default function HomePage() {
 
 const Home = styled.div``;
 
-
-
 const HeaderDiv = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
 `;
-
-const SideBarDiv = styled.div`
-  height: auto;
-  width: 15%;
-  background-color: #e1ecf4;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const SideBarMobileDiv = styled.div``;
 
 const HeaderDivMobile = styled.div`
   @media (min-width: 769px) {

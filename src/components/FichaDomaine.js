@@ -1,119 +1,76 @@
+import Header from "./Header";
+import SideBar from "./SideBar";
+import { useParams } from "react-router-dom";
+import {
+  greciaVinhosZacharias,
+  greciaVinhosDomaine,
+  portugalVinhos,
+  espanhaVinhos,
+} from "../constants/BD";
+import WhatsappButton from "./WhatsappButton";
 import styled from "styled-components";
-import { useState } from "react";
-import { useParams } from "react-router-dom"
-import Header from "./Header.js"
-import Espanha from "../components/Espanha";
-import Grecia from "../components/Grecia";
-import HeaderMobile from "../components/HeaderMobile";
-import Portugal from "../components/Portugal";
-import SideBar from "../components/SideBar";
-import SideBarMobile from "../components/SideBarMobile";
-import { espanhaVinhos, greciaVinhos, greciaVinhosDomaine, greciaVinhosZacharias, portugalVinhos } from "../constants/BD";
-
 
 export default function FichaDomaine() {
-    const [greciaListDomaine, setGreciaListDomaine] =
-    useState(greciaVinhosDomaine);
-    const [greciaListZacharias, setGreciaListZacharias] =
-    useState(greciaVinhosZacharias);
-  const [greciaList, setGreciaList] = useState(greciaVinhos);
-  const [portugalList, setPortugalList] = useState(portugalVinhos);
-  const [espanhaList, setEspanhaList] = useState(espanhaVinhos);
+  const { name } = useParams();
 
-    const {name} = useParams();
-    const [showMenu, setShowMenu] = useState(false);
+  const vinho = greciaVinhosDomaine.filter((g) => g.url === name);
 
-    const vinho = greciaVinhosDomaine.filter((g) => (g.url === name))
+  console.log(vinho[0]);
 
-    
+  return (
+    <>
+      <WhatsappButton />
+      <Header></Header>
+      <FichaToda>
+        <SideBar></SideBar>
 
+        <Fichinha>
+          <h1>{vinho[0].nome}</h1>
 
-    return <>
-    <HeaderDiv>
-        <Header />
-      </HeaderDiv>
-
-      <HeaderDivMobile>
-        <HeaderMobile setShowMenu={setShowMenu} />
-      </HeaderDivMobile>
-      {showMenu ? (
-        <SideBarMobileDiv>
-          <SideBarMobile
-            greciaListDomaine={greciaListDomaine}
-            setGreciaListDomaine={setGreciaListDomaine}
-            greciaListZacharias={greciaListZacharias}
-            setGreciaListZacharias={setGreciaListZacharias}
-            greciaList={greciaList}
-            setGreciaList={setGreciaList}
-            portugalList={portugalList}
-            setPortugalList={setPortugalList}
-            espanhaList={espanhaList}
-            setEspanhaList={setEspanhaList}
-            setShowMenu={setShowMenu}
-          />
-        </SideBarMobileDiv>
-      ) : (
-        ""
-      )}
-
-      <WineList>
-        <SideBarDiv>
-          <SideBar
-            greciaListDomaine={greciaListDomaine}
-            setGreciaListDomaine={setGreciaListDomaine}
-            greciaListZacharias={greciaListZacharias}
-            setGreciaListZacharias={setGreciaListZacharias}
-            greciaList={greciaList}
-            setGreciaList={setGreciaList}
-            portugalList={portugalList}
-            setPortugalList={setPortugalList}
-            espanhaList={espanhaList}
-            setEspanhaList={setEspanhaList}
-          />
-        </SideBarDiv>
-
-        
-        
-      </WineList>
-   
+          <FotoEDados>
+            <FotoVinho>
+              <img src={vinho[0].image} alt="foto da garrafa"></img>
+            </FotoVinho>
+            <Dados>
+              <p>
+                <spam> ORIGEM Produtora</spam>: {vinho[0].produtora}
+              </p>
+              <p>
+                <spam>Região</spam>: {vinho[0].região}
+              </p>
+              <p>
+                <spam>CASTAS Uvas</spam>: {vinho[0].uvas}
+              </p>
+              <p>
+                <spam>SAFRA</spam>:{vinho[0].safra}
+              </p>
+              <p>
+                <spam>HARMONIZAÇÃO</spam>: {vinho[0].harmonizacao}
+              </p>
+              <p>
+                <spam>NOTAS</spam>: {vinho[0].notas}
+              </p>
+            </Dados>
+          </FotoEDados>
+        </Fichinha>
+      </FichaToda>
     </>
+  );
 }
 
-const HeaderDiv = styled.div`
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const HeaderDivMobile = styled.div`
-  @media (min-width: 769px) {
-    display: none;
-  }
-`;
-
-const WineList = styled.div`
+const FichaToda = styled.div`
   display: flex;
 `;
 
-const SideBarDiv = styled.div`
-  height: auto;
-  width: 15%;
-  background-color: #e1ecf4;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const SideBarMobileDiv = styled.div``;
-
-const PaisList = styled.div`
-  width: 85%;
-  margin: 0px 20px;
+const Fichinha = styled.div`
   display: flex;
   flex-direction: column;
+`;
 
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+const FotoVinho = styled.div``;
+
+const Dados = styled.div``;
+
+const FotoEDados = styled.div`
+  display: flex;
 `;
