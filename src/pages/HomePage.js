@@ -1,28 +1,32 @@
-import styled from "styled-components";
-import logomeio from "../assets/images/logo-meio.png";
-import garrafa from "../assets/images/garrafa-home.png";
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import styled from "styled-components";
 import Header from "../components/Header";
 import HeaderMobile from "../components/HeaderMobile";
 import WhatsappButton from "../components/WhatsappButton";
+import logomeio from "../assets/images/logo-meio.png";
+import { Link } from "react-router-dom";
+import garrafa from "../assets/images/garrafa-home.png";
+import HeaderMobileHome from "../components/HeaderMobileHome";
+import SideBarMobileHome from "../components/SideBarMobileHome";
 
 export default function HomePage() {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenuHome, setShowMenuHome] = useState(false);
   return (
-    <Home>
-      <WhatsappButton />
+    <>
       <HeaderDiv>
         <Header />
       </HeaderDiv>
 
       <HeaderDivMobile>
-        <HeaderMobile setShowMenu={setShowMenu} />
+        <HeaderMobileHome setShowMenuHome={setShowMenuHome} />
       </HeaderDivMobile>
-      <Body1>
+
+      {showMenuHome ? <SideBarMobileHome /> : ""}
+
+      <PrimeiraSecao>
         <h1>Os vinhos são a nossa paixão.</h1>
         <p>
-          Por isso, a <span>GRK</span>, importador e distribuidora boutique,
+          Por isso, a <span>GRK</span>, importadora e distribuidora boutique,
           viaja o mundo buscando iguarias que propiciem experiências inusitadas
           aos nossos clientes.
         </p>
@@ -32,56 +36,30 @@ export default function HomePage() {
           e foco na satisfação do nosso cliente.
         </p>
         <img src={logomeio} alt="logo meio da página" />
-      </Body1>
-      <MidImage></MidImage>
-      <Body2>
+      </PrimeiraSecao>
+
+      <Divisoria></Divisoria>
+
+      <SegundaSecao>
         <div>
           <h1>Nossos Vinhos</h1>
           <p>
             Vinhos especialmente selecionados que trazem o sabor dos seus países
             e regiões, além da sua cultura e estilo de vida.
           </p>
-          <Link to="/vinhos">
-          <button>
-            clique aqui para e conheça o mundo pelos vinhos da grk
-          </button>
-          </Link>
+          <BotaoDiv>
+            <Link to="/vinhos">
+              <button>clique aqui e conheça o mundo pelos vinhos da grk</button>
+            </Link>
+          </BotaoDiv>
         </div>
         <img src={garrafa} alt="garrafa" />
-      </Body2>
+      </SegundaSecao>
 
-      <Footer>
-        <div>
-          <h1>Entre em contato</h1>
-          <form>
-            <label htmlFor="name">nome completo</label>
-            <Input id="name" type="text"></Input>
-            <label htmlFor="email">e-mail</label>
-            <Input id="email" type="email"></Input>
-            <label htmlFor="phone">telefone</label>
-            <Input id="phone" type="tel"></Input>
-            <label htmlFor="message">mensagem</label>
-            <InputMessage id="message" type="text"></InputMessage>
-            <Botao>
-              <button>enviar</button>
-            </Botao>
-          </form>
-        </div>
-        <Direita>
-          <h2>GRK Products</h2>
-          <p>R. Visconde de Pirajá, 303 - Sala 808</p>
-          <p>Ipanema - Rio de Janeiro - RJ - Brasil</p>
-          <p>CEP 22410-001</p>
-          <p>Telefone: +55 21 2221-9024</p>
-          <p>E-mail: contato@grkproducts.com.br</p>
-         
-        </Direita>
-      </Footer>
-    </Home>
+      <WhatsappButton />
+    </>
   );
 }
-
-const Home = styled.div``;
 
 const HeaderDiv = styled.div`
   @media (max-width: 768px) {
@@ -95,7 +73,11 @@ const HeaderDivMobile = styled.div`
   }
 `;
 
-const Body1 = styled.div`
+const PrimeiraSecao = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   h1 {
     color: #17536f;
     font-size: 60px;
@@ -116,17 +98,38 @@ const Body1 = styled.div`
   }
 
   img {
-    margin: 40px 65px;
+    margin: 30px 65px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 30px;
+      margin: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 10px 20px;
+      line-height: 30px;
+    }
+
+    img {
+      width: 250px;
+    }
   }
 `;
 
-const MidImage = styled.div`
+const Divisoria = styled.div`
   height: 100px;
   width: auto;
   background-color: #a37952;
+
+  @media (max-width: 768px) {
+    height: 50px;
+  }
 `;
 
-const Body2 = styled.div`
+const SegundaSecao = styled.div`
   height: auto;
   width: auto;
   background-color: #d2c8af;
@@ -164,58 +167,41 @@ const Body2 = styled.div`
     padding: 20px;
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      padding: 0px;
+      font-size: 30px;
+      margin: 20px;
+    }
+
+    p {
+      width: auto;
+      padding: 0px;
+      margin: 0px 20px;
+    }
+
+    img {
+      display: none;
+    }
+
+    button {
+      width: 250px;
+      font-size: 18px;
+      padding: 10px;
+      margin: 20px;
+    }
+  }
 `;
 
-const Footer = styled.div`
-  background-color: #175067;
+const BotaoDiv = styled.div`
   display: flex;
-
-  div {
-    width: 70%;
-    padding-left: 200px;
-    padding-bottom: 100px;
-  }
-
-  h1 {
-    font-size: 60px;
-    color: #ffffff;
-    padding: 50px 0;
-  }
-
-  form {
-    color: #ffffff;
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  button {
-    width: 80px;
-    height: 30px;
-    margin-right: 18px;
-  }
-`;
-
-const Input = styled.input`
-  height: 45px;
-  width: 600px;
-  margin: 10px 0px;
-  background-color: transparent;
-`;
-
-const InputMessage = styled.input`
-  height: 100px;
-  width: 600px;
-  margin: 10px 0px;
-  background-color: transparent;
-`;
-
-const Botao = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const Direita = styled.div`
-  color: #ffffff;
-  padding-top: 150px;
+  justify-content: center;
 `;

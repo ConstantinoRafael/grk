@@ -4,19 +4,17 @@ import { SlMenu } from "react-icons/sl";
 import logo from "../assets/images/logo-branco-grk.png";
 import { useNavigate } from "react-router-dom";
 
-export default function HeaderMobile({ setShowMenu }) {
+export default function HeaderMobileHome({ setShowMenuHome }) {
   const navigate = useNavigate();
 
   return (
     <>
       <HeaderStyles>
-        <IconBars onClick={() => setShowMenu(true)}>
+        <IconBars onClick={() => setShowMenuHome(true)}>
           <SlMenu />
         </IconBars>
         <img src={logo} onClick={() => navigate("/")} alt="logo grk" />
       </HeaderStyles>
-
-      
     </>
   );
 }
@@ -41,3 +39,5 @@ const IconBars = styled.div`
   font-size: 40px;
   margin-left: 20px;
 `;
+
+

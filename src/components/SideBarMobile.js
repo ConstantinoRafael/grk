@@ -188,12 +188,14 @@ export default function SideBarMobile({
               ""
             )}
           </Secao>
+          <Espacinho></Espacinho>
           <Secao>
             <TituloOpcoes>
               <p>destilados</p>
               <IoIosArrowDown />
             </TituloOpcoes>
           </Secao>
+          <Espacinho></Espacinho>
           <Secao>
             <TituloOpcoes>contato</TituloOpcoes>
           </Secao>
@@ -292,6 +294,11 @@ const Opcao = styled.div`
     box-shadow: 0 0 5px rgba(33, 33, 33, 0.2);
   }
 `;
+
+const Espacinho = styled.div`
+    height: 1px;
+    background-color: #ffffff;
+`
 
 // const Form = styled.form`
 //   display: flex;

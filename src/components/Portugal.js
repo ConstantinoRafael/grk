@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 //import { portugalList } from "../constants/BD";
 
@@ -19,12 +20,14 @@ export default function Portugal({ portugalList }) {
       <PhotosList>
         {portugalList.map((p, i) => (
           <div key={i}>
-            <EachWine>
-              <img src={p.image} alt="foto da garrafa" />
-              <Subtitle>
-                <p>{p.nome}</p>
-              </Subtitle>
-            </EachWine>
+            <Link to={`/vinhos/${p.url}`}>
+              <EachWine>
+                <img src={p.image} alt="foto da garrafa" />
+                <Subtitle>
+                  <p>{p.nome}</p>
+                </Subtitle>
+              </EachWine>
+            </Link>
           </div>
         ))}
       </PhotosList>
@@ -41,13 +44,19 @@ const LinhaHorizontal = styled.div`
   background-color: #000000;
 
   @media (max-width: 768px) {
-  width: 135px;
-}
+    width: 135px;
+  }
 `;
 
 const PhotosList = styled.div`
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const EachWine = styled.div`
@@ -73,10 +82,10 @@ const EachWine = styled.div`
   }
 
   @media (max-width: 768px) {
-    width:130px;
+    width: 130px;
     height: 325px;
 
-    img{
+    img {
       height: 305px;
     }
 
@@ -91,7 +100,7 @@ const Subtitle = styled.div`
   margin: auto;
   text-align: center;
 
-  @media (max-width: 768px;) {
+  @media (max-width: 768px) {
     height: 20px;
   }
 `;

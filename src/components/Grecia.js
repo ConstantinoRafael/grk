@@ -20,9 +20,14 @@ export default function Grecia({
         francesa, como a Cabernet Sauvignon e a Syrah, que se adaptaram muito
         bem aos diveros terroirs gregos.
       </h2>
-      <Produtora>
-        <h3>Domaine Costa Lazaridi</h3>
-      </Produtora>
+      {greciaListDomaine.length > 0 ? (
+        <Produtora>
+          <h3>Domaine Costa Lazaridi</h3>
+        </Produtora>
+      ) : (
+        ""
+      )}
+
       <PhotosList>
         {greciaListDomaine.map((g, i) => (
           <div key={i}>
@@ -38,12 +43,12 @@ export default function Grecia({
         ))}
       </PhotosList>
       <Produtora>
-        <h3>Zacharias</h3>
+        <h3>Zacharias Winery</h3>
       </Produtora>
       <PhotosList>
         {greciaListZacharias.map((g, i) => (
           <div key={i}>
-            <Link to={`/${g.url}`}>
+            <Link to={`/vinhos/${g.url}`}>
               <EachWine>
                 <img src={g.image} alt="foto da garrafa" />
                 <Subtitle>
@@ -72,8 +77,14 @@ const LinhaHorizontal = styled.div`
 `;
 
 const PhotosList = styled.div`
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const EachWine = styled.div`
@@ -97,7 +108,6 @@ const EachWine = styled.div`
   img {
     height: 470px;
   }
-  
 
   @media (max-width: 768px) {
     width: 130px;
@@ -133,7 +143,6 @@ const Produtora = styled.div`
   h3 {
     color: #ffffff;
     font-size: 20px;
-    font-weight: bold;
     margin-left: 20px;
   }
 `;

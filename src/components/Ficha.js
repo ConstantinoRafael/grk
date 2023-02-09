@@ -10,12 +10,31 @@ import {
 import WhatsappButton from "./WhatsappButton";
 import styled from "styled-components";
 
-export default function FichaDomaine() {
+export default function Ficha() {
   const { name } = useParams();
 
-  const vinho = greciaVinhosDomaine.filter((g) => g.url === name);
+  let vinho;
 
-  console.log(vinho[0]);
+  const vinhoDomaine = greciaVinhosDomaine.filter((g) => g.url === name);
+  const vinhoZacharias = greciaVinhosZacharias.filter((g) => g.url === name);
+  const vinhoPortugal = portugalVinhos.filter((g) => g.url === name);
+  const vinhoEspanha = espanhaVinhos.filter((g) => g.url === name);
+
+  if (vinhoDomaine.length > 0) {
+    vinho = vinhoDomaine;
+  }
+
+  if (vinhoZacharias.length > 0) {
+    vinho = vinhoZacharias;
+  }
+
+  if (vinhoPortugal.length > 0) {
+    vinho = vinhoPortugal;
+  }
+
+  if (vinhoEspanha.length > 0) {
+    vinho = vinhoEspanha;
+  }
 
   return (
     <>
@@ -42,7 +61,7 @@ export default function FichaDomaine() {
                 <spam>CASTAS Uvas</spam>: {vinho[0].uvas}
               </p>
               <p>
-                <spam>SAFRA</spam>:{vinho[0].safra}
+                <spam>SAFRA</spam>: {vinho[0].safra}
               </p>
               <p>
                 <spam>HARMONIZAÇÃO</spam>: {vinho[0].harmonizacao}
@@ -65,11 +84,31 @@ const FichaToda = styled.div`
 const Fichinha = styled.div`
   display: flex;
   flex-direction: column;
+  h1 {
+    margin-left: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+
+  img {
+    margin: 50px;
+  }
+
+  p {
+    margin: 5px;
+  }
 `;
 
 const FotoVinho = styled.div``;
 
-const Dados = styled.div``;
+const Dados = styled.div`
+  width: 600px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 
 const FotoEDados = styled.div`
   display: flex;

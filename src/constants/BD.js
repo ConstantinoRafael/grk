@@ -28,20 +28,19 @@ import oenotriaLand from "../assets/images/produtos/oenotria-land.png";
 import okeanosCabernetMerlot from "../assets/images/produtos/okeanos-cabernet-merlot.png";
 import okeanosSauvignonBlancMoscato from "../assets/images/produtos/okeanos-sauvignon-blanc-moscato.png";
 import thalassaRed from "../assets/images/produtos/thalassa-red.png";
-import ambelosPhosRed from "../assets/images/produtos/ambelos-phos-red.png"
-import ambelosPhosWhite from "../assets/images/produtos/ambelos-phos-white.png"
-import lexisGrisRoseMoschofilero from "../assets/images/produtos/lexis-gris-rose-moschofilero.png"
-import omikronTinto from "../assets/images/produtos/omikron-tinto.png"
-import omikronBranco from "../assets/images/produtos/omikron-branco.png"
-import omikronRetsina from "../assets/images/produtos/omikron-retsina.png"
-import omikronRose from "../assets/images/produtos/omikron-rose.png"
-import zachariasAgiorgitikoBio from "../assets/images/produtos/zacharias-agiorgitiko-bio.png"
-import zachariasAssyrtiko from "../assets/images/produtos/zacharias-assyrtiko.png"
-import zachariasKidonitsa from "../assets/images/produtos/zacharias-kidonitsa.png"
-import zachariasMoschofileroBio from "../assets/images/produtos/zacharias-moschofilero-bio.png"
-import zachariasNemea from "../assets/images/produtos/zacharias-nemea.png"
-import zachariasRoseBio from "../assets/images/produtos/zacharias-rose-bio.png"
-
+import ambelosPhosRed from "../assets/images/produtos/ambelos-phos-red.png";
+import ambelosPhosWhite from "../assets/images/produtos/ambelos-phos-white.png";
+import lexisGrisRoseMoschofilero from "../assets/images/produtos/lexis-gris-rose-moschofilero.png";
+import omikronTinto from "../assets/images/produtos/omikron-tinto.png";
+import omikronBranco from "../assets/images/produtos/omikron-branco.png";
+import omikronRetsina from "../assets/images/produtos/omikron-retsina.png";
+import omikronRose from "../assets/images/produtos/omikron-rose.png";
+import zachariasAgiorgitikoBio from "../assets/images/produtos/zacharias-agiorgitiko-bio.png";
+import zachariasAssyrtiko from "../assets/images/produtos/zacharias-assyrtiko.png";
+import zachariasKidonitsa from "../assets/images/produtos/zacharias-kidonitsa.png";
+import zachariasMoschofileroBio from "../assets/images/produtos/zacharias-moschofilero-bio.png";
+import zachariasNemea from "../assets/images/produtos/zacharias-nemea.png";
+import zachariasRoseBio from "../assets/images/produtos/zacharias-rose-bio.png";
 
 // export const products = [
 //   {
@@ -122,7 +121,7 @@ export const greciaVinhosDomaine = [
   {
     id: 1,
     nome: "THALASSA WHITE",
-    url:"thalassa-white",
+    url: "thalassa-white",
     image: thalassaWhite,
     tipo: "branco",
     pais: "Grécia",
@@ -137,7 +136,7 @@ export const greciaVinhosDomaine = [
   {
     id: 2,
     nome: "OKEANOS ASSYRTIKO CHARDONNAY",
-    url:"okeanos-assyrtiko-chardonnay",
+    url: "okeanos-assyrtiko-chardonnay",
     image: okeanosAssyrtikoChardonnay,
     tipo: "branco",
     pais: "Grécia",
@@ -153,7 +152,7 @@ export const greciaVinhosDomaine = [
   {
     id: 3,
     nome: "OKEANOS SAUVIGNON BLANC-MOSCATO",
-    url:"okeanos-sauvignon-blanc-moscato",
+    url: "okeanos-sauvignon-blanc-moscato",
     image: okeanosSauvignonBlancMoscato,
     tipo: "branco",
     pais: "Grécia",
@@ -169,7 +168,7 @@ export const greciaVinhosDomaine = [
   {
     id: 4,
     nome: "OENODEA WHITE",
-    url:"oenodea-white",
+    url: "oenodea-white",
     image: oenodeaWhite,
     tipo: "branco",
     pais: "Grécia",
@@ -185,7 +184,7 @@ export const greciaVinhosDomaine = [
   {
     id: 5,
     nome: "AMETHISTOS BLANC",
-    url:"amethistos-blanc",
+    url: "amethistos-blanc",
     image: amethistosBlanc,
     tipo: "branco",
     pais: "Grécia",
@@ -201,7 +200,7 @@ export const greciaVinhosDomaine = [
   {
     id: 6,
     nome: "AMETHISTOS SAUVIGNON BLANC",
-    url:"amethistos-sauvignon-blanc",
+    url: "amethistos-sauvignon-blanc",
     image: amethistosSauvignonBlanc,
     tipo: "branco",
     pais: "Grécia",
@@ -217,9 +216,9 @@ export const greciaVinhosDomaine = [
   {
     id: 7,
     nome: "DOMAINE COSTA LAZARIDI MALAGOUZIA",
-    url:"domaine-costa-lazaridi-malagouzia",
+    url: "domaine-costa-lazaridi-malagouzia",
     image: domaineCostaLazaridiMalagouzia,
-    tipo: "",
+    tipo: "branco",
     pais: "Grécia",
     produtora: "Domaine Costa Lazaridi",
     região: "Drama",
@@ -233,7 +232,7 @@ export const greciaVinhosDomaine = [
   {
     id: 8,
     nome: "DOMAINE COSTA LAZARIDI ROSÉ",
-    url:"domaine-costa-lazaridi-rose",
+    url: "domaine-costa-lazaridi-rose",
     image: domaineCostaLazaridiRose,
     tipo: "rose",
     pais: "Grécia",
@@ -249,9 +248,9 @@ export const greciaVinhosDomaine = [
   {
     id: 9,
     nome: "THALASSA RED",
-    url:"thalassa-red",
+    url: "thalassa-red",
     image: thalassaRed,
-    tipo: "",
+    tipo: "tinto",
     pais: "Grécia",
     produtora: "Domaine Costa Lazaridi",
     região: "PGI Drama",
@@ -265,7 +264,7 @@ export const greciaVinhosDomaine = [
   {
     id: 10,
     nome: "OKEANOS CABERNET MERLOT",
-    url:"okeanos-cabernet-merlot",
+    url: "okeanos-cabernet-merlot",
     image: okeanosCabernetMerlot,
     tipo: "",
     pais: "Grécia",
@@ -281,9 +280,9 @@ export const greciaVinhosDomaine = [
   {
     id: 11,
     nome: "OENODEA RED",
-    url:"oenodea-red",
+    url: "oenodea-red",
     image: oenodeaRed,
-    tipo: "",
+    tipo: "tinto",
     pais: "Grécia",
     produtora: "Domaine Costa Lazaridi",
     região: "PGI Drama",
@@ -297,7 +296,7 @@ export const greciaVinhosDomaine = [
   {
     id: 12,
     nome: "DOMAINE COSTA LAZARIDI SYRAH",
-    url:"domaine-costa-lazaridi-syrah",
+    url: "domaine-costa-lazaridi-syrah",
     image: domaineCostaLazaridiSyrah,
     tipo: "",
     pais: "Grécia",
@@ -313,9 +312,9 @@ export const greciaVinhosDomaine = [
   {
     id: 13,
     nome: "OENOTRIA LAND",
-    url:"oenotria-land",
+    url: "oenotria-land",
     image: oenotriaLand,
-    tipo: "",
+    tipo: "tinto",
     pais: "Grécia",
     produtora: "Domaine Costa Lazaridi",
     região: "Kapandriti",
@@ -329,7 +328,7 @@ export const greciaVinhosDomaine = [
   {
     id: 14,
     nome: "AMETHISTOS CAVA",
-    url:"amethistos-cava",
+    url: "amethistos-cava",
     image: amethistosCava,
     tipo: "",
     pais: "Grécia",
@@ -350,15 +349,15 @@ export const greciaVinhosZacharias = [
     nome: "OMIKRON RETSINA",
     url: "omikron-restina",
     image: omikronRetsina,
-    tipo: "",
+    tipo: "branco",
     pais: "Grécia",
     produtora: "Zacharia Winery",
     região: "Peloponeso",
     uvas: "Roditis e Moschofilero",
     safra: 2019,
-    harmonizacao: "Alimentos fortes, condimentados, salgados ou apimentados. Também vai bem em drinks.",
-    notas:
-      "",
+    harmonizacao:
+      "Alimentos fortes, condimentados, salgados ou apimentados. Também vai bem em drinks.",
+    notas: "",
   },
   {
     id: 2,
@@ -371,21 +370,24 @@ export const greciaVinhosZacharias = [
     região: "Peloponeso",
     uvas: "Roditis e Moschofilero",
     safra: 2019,
-    harmonizacao: "Aves, peixes, queijos frescos, saladas e mesmo em coquetéis.",
-    notas: "De tonalidade amarelo-palha com reflexos dourados, seu aroma é vividaente frutado, com toques agradáveis de frutas cítricas. Na boca: leveza, boa acidez e bastante frescor.",
+    harmonizacao:
+      "Aves, peixes, queijos frescos, saladas e mesmo em coquetéis.",
+    notas:
+      "De tonalidade amarelo-palha com reflexos dourados, seu aroma é vividaente frutado, com toques agradáveis de frutas cítricas. Na boca: leveza, boa acidez e bastante frescor.",
   },
   {
     id: 3,
     nome: "ZACHARIAS ASSYRTIKO",
     url: "zacharias-assyrtiko",
     image: zachariasAssyrtiko,
-    tipo: "",
+    tipo: "branco",
     pais: "Grécia",
     produtora: "Zacharia Winery",
     região: "Peloponeso",
     uvas: "Assyrtiko",
     safra: 2019,
-    harmonizacao: "Filé de cherne grelhado, polvo grelhado com páprica, bacalhau às notas, frutos do mar e queijos (branco e de cabra).",
+    harmonizacao:
+      "Filé de cherne grelhado, polvo grelhado com páprica, bacalhau às notas, frutos do mar e queijos (branco e de cabra).",
     notas:
       "Bom corpo, com coloração amarelo-palha brilhante. Tem aromas discretos de flores brancas, frutas cítricas, em especial limão siciliano, e toque defumado. Bom equiíbrio, com uma acidez refrescante e elegante, e final longo e persistente.",
   },
@@ -400,7 +402,8 @@ export const greciaVinhosZacharias = [
     região: "Peloponeso",
     uvas: "Agiorgitiko",
     safra: 2019,
-    harmonizacao: "Carnes ensopadas, legumes recheadaos, massas com molho vermelho, charcutaria e queijos macios.",
+    harmonizacao:
+      "Carnes ensopadas, legumes recheadaos, massas com molho vermelho, charcutaria e queijos macios.",
     notas:
       "Da variedade grega mais nobre, a Agiorgitiko, destaca-se pelo sabor aveludado e pelos aromas vividos, frescos e frutados. Possui taninos macios. De cor ruby com halo aquoso. Na boca, ótima acidez, com médio corpo.",
   },
@@ -415,7 +418,8 @@ export const greciaVinhosZacharias = [
     região: "Nemea",
     uvas: "Agiorgitiko",
     safra: 2018,
-    harmonizacao: "Ragus, hambúrguer de carne de costela, assados e grelhados com molho vermelho, densos e marcantes.",
+    harmonizacao:
+      "Ragus, hambúrguer de carne de costela, assados e grelhados com molho vermelho, densos e marcantes.",
     notas:
       "De cor vemelho rubi profundo e um bouquet maduro que revela aromas de frutas vermelhas e especiarias, em especial notas de baunilha e nozes. Bom corpo, com elegante textura, acidez equilibrada e taninos macios. Delicioso frescor, com final persistente e prazeroso.",
   },
@@ -430,7 +434,8 @@ export const greciaVinhosZacharias = [
     região: "PGI PELOPONESO",
     uvas: "Moschofilero 50% e Roditis Fox 50%",
     safra: 2020,
-    harmonizacao: "Pratos mediterrâneos, queijo feta, ensopados, molhos brancos, e pratos de frutos do mar harmonizam perfeitamente. Disfrute gelado, com um aparitivo.",
+    harmonizacao:
+      "Pratos mediterrâneos, queijo feta, ensopados, molhos brancos, e pratos de frutos do mar harmonizam perfeitamente. Disfrute gelado, com um aparitivo.",
     notas:
       "Vinho amarelo claro com nuances verdes. Intenso e amadurecido no olfato, com aromas distintos de limão, melão e pétalas de rosa. Seco no paladar e bem balanceado com uma vibrante acidez, corpo médio com um toque de minerais.",
   },
@@ -445,7 +450,8 @@ export const greciaVinhosZacharias = [
     região: "PGI PELOPONESO",
     uvas: "100% Kidonitsa",
     safra: 2020,
-    harmonizacao: "Peixes, massas com frutos do mar, cozinha mediterrânea, queijos amarelos leves.",
+    harmonizacao:
+      "Peixes, massas com frutos do mar, cozinha mediterrânea, queijos amarelos leves.",
     notas:
       "Cor amarela com reflexos verdosos. Aromas complexos de pera, furtas cítricas e marmelo. E aromas frescos e delicados de camomila e jasmin. Bem encorpado, com toques cremosos, acidez equilibrada, nuances de minerais.",
   },
@@ -460,7 +466,8 @@ export const greciaVinhosZacharias = [
     região: "PGI PELOPONESO",
     uvas: "100% Moschofilero",
     safra: 2020,
-    harmonizacao: "Cozinha asiática, sushi, mariscos, aves com molhos doces e agridoces, queijos brancos macios, saladas verdes.",
+    harmonizacao:
+      "Cozinha asiática, sushi, mariscos, aves com molhos doces e agridoces, queijos brancos macios, saladas verdes.",
     notas:
       "Amarelo claro e brilhante. Pétalas de rosa e aromas locais de Moschofilero. Deliciosamente fresco, alta acidez e sabores delicados de grande intensidade de frutas cítricas, rosa e capim-limão. Textura limpa com o final com um toque de limão.",
   },
@@ -490,7 +497,8 @@ export const greciaVinhosZacharias = [
     região: "PGI PELOPONESO",
     uvas: "100% Agiorgitiko",
     safra: 2020,
-    harmonizacao: "Queijos amarelos, camarão, massas, lagosta, salmão, atum, cozinha tradicional grega e frutos do mar.",
+    harmonizacao:
+      "Queijos amarelos, camarão, massas, lagosta, salmão, atum, cozinha tradicional grega e frutos do mar.",
     notas:
       "Rosa delicado. Aroma frutado de morangos e doces. Paladar rico e acidez equilibrada, com notas de cereja. Corpo médio. Agradável Frescor.",
   },
@@ -505,7 +513,8 @@ export const greciaVinhosZacharias = [
     região: "PGI PELOPONESO",
     uvas: "100% Moschofilero",
     safra: 2020,
-    harmonizacao: "Frutas do mar, risotos, saladas frescas, cozinha asiática, queijos brancos apimentados, salmão..",
+    harmonizacao:
+      "Frutas do mar, risotos, saladas frescas, cozinha asiática, queijos brancos apimentados, salmão..",
     notas:
       "Cor salmão claro com tons de cinza. Aromas intensos de frutas cítricas, flores brancas pequenas e pétalas de rosa. Nuances de pimenta branca, água de rosa e limão. Final persistente e acidez equilibrada.",
   },
@@ -514,13 +523,14 @@ export const greciaVinhosZacharias = [
     nome: "AMBELOS PHOS RED",
     url: "ambelos-phos-red",
     image: ambelosPhosRed,
-    tipo: "",
+    tipo: "tinto",
     pais: "Grécia",
     produtora: "Zacharia Winery",
     região: "PGI PELOPONESO",
     uvas: "Agiorgitiko 70% e Cabernet Sauvignon 30%",
     safra: 2020,
-    harmonizacao: "Queijos amarelos, frios, pratos aromatizados, carnes vermelhas, molhos picantes. Massas, molhos vermelhos, pratos tradicionais gregos..",
+    harmonizacao:
+      "Queijos amarelos, frios, pratos aromatizados, carnes vermelhas, molhos picantes. Massas, molhos vermelhos, pratos tradicionais gregos..",
     notas:
       "Avermelhado escuro. Buquês lindamente abertos de cerejas e ameixas, com notas de pimenta e baunilha. Paladar ricos, maduro, encorpado, bem estruturado, com taninos suavizados.",
   },
@@ -529,17 +539,18 @@ export const greciaVinhosZacharias = [
     nome: "ZACHARIAS AGIORGITIKO BIO",
     url: "zacharias-agiorgitiko-bio",
     image: zachariasAgiorgitikoBio,
-    tipo: "",
+    tipo: "tinto",
     pais: "Grécia",
     produtora: "Zacharia Winery",
     região: "PGI PELOPONESO",
     uvas: "100% Agiorgitiko",
     safra: 2020,
-    harmonizacao: "Carnes vermelhas, massas com molho vermelho, vegetais, pizza, burgues.",
+    harmonizacao:
+      "Carnes vermelhas, massas com molho vermelho, vegetais, pizza, burgues.",
     notas:
       "Cor rubi. Aroma de cereja, geléia de morango e frutas vermelhas, com nuances de baunilha e especiarías aromáticas. Acidez balanceada, corpo-médio com presença de taninos aveludados e macios.",
   },
-]
+];
 
 export const greciaVinhos = [
   {
@@ -787,6 +798,7 @@ export const portugalVinhos = [
   {
     id: 1,
     nome: "TERRAS DO MONTE BRANCO",
+    url: "terras-do-monte-branco",
     image: terrasDoMonte,
     tipo: "branco",
     pais: "Portugal",
@@ -801,6 +813,7 @@ export const portugalVinhos = [
   {
     id: 2,
     nome: "INSTINTO FORTE BRANCO",
+    url: "instinto-forte-branco",
     image: instintoForteBranco,
     tipo: "branco",
     pais: "Portugal",
@@ -815,6 +828,7 @@ export const portugalVinhos = [
   {
     id: 3,
     nome: "TERRAS DO MONTE TINTO",
+    url: "terras-do-monte-tinto",
     image: terrasDoMonteTinto,
     tipo: "tinto",
     pais: "Portugal",
@@ -830,6 +844,7 @@ export const portugalVinhos = [
   {
     id: 4,
     nome: "INSTINTO FORTE TINTO",
+    url: "instinto-forte-tinto",
     image: instintoForteTinto,
     tipo: "tinto",
     pais: "Portugal",
@@ -844,6 +859,7 @@ export const portugalVinhos = [
   {
     id: 5,
     nome: "VIOLINO",
+    url: "violino",
     image: violino,
     tipo: "tinto",
     pais: "Portugal",
@@ -859,6 +875,7 @@ export const portugalVinhos = [
   {
     id: 6,
     nome: "MEDEIROS BRANCO",
+    url: "medeiros-branco",
     image: medeirosBranco,
     tipo: "branco",
     pais: "Portugal",
@@ -873,6 +890,7 @@ export const portugalVinhos = [
   {
     id: 7,
     nome: "MEDEIROS ROSÉ",
+    url: "medeiros-rose",
     image: medeirosRose,
     tipo: "rose",
     pais: "Portugal",
@@ -888,6 +906,7 @@ export const portugalVinhos = [
   {
     id: 8,
     nome: "ARES DE MEDEIROS TINTO",
+    url: "ares-de-medeiros",
     image: aresDeMedeirosTinto,
     tipo: "tinto",
     pais: "Portugal",
@@ -902,6 +921,7 @@ export const portugalVinhos = [
   {
     id: 9,
     nome: "MEDEIROS PRIVATE SELECTION",
+    url: "medeiros-private-selection",
     image: medeirosPrivateSelection,
     tipo: "",
     pais: "Portugal",
@@ -916,6 +936,7 @@ export const portugalVinhos = [
   {
     id: 10,
     nome: "VALE DA VEIGA BRANCO",
+    url: "vale-da-veiga-branco",
     image: valeDaVeigaBranco,
     tipo: "branco",
     pais: "Portugal",
@@ -931,6 +952,7 @@ export const portugalVinhos = [
   {
     id: 11,
     nome: "VALE DA VEIGA TINTO",
+    url: "vale-da-veiga-tinto",
     image: valeDaVeigaTinto,
     tipo: "tinto",
     pais: "Portugal",
@@ -949,6 +971,7 @@ export const espanhaVinhos = [
   {
     id: 1,
     nome: "TRIAS BATLLE BRANCO",
+    url: "trias-batlle-branco",
     image: triasBatlleBranco,
     tipo: "branco",
     pais: "Espanha",
@@ -963,6 +986,7 @@ export const espanhaVinhos = [
   {
     id: 2,
     nome: "TRIAS BATLLE TINTO",
+    url: "trias-batlle-tinto",
     image: triasBatlleTinto,
     tipo: "tinto",
     pais: "Espanha",
@@ -978,6 +1002,7 @@ export const espanhaVinhos = [
   {
     id: 3,
     nome: "CAVA NATURE TRIAS BATLLE",
+    url: "cava-nature-trias-batlle",
     image: cavaNatureTriasBatlle,
     tipo: "espumante",
     pais: "Espanha",

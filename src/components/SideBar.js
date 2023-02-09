@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { espanhaVinhos, greciaVinhos, portugalVinhos } from "../constants/BD";
+import { espanhaVinhos, greciaVinhos, greciaVinhosDomaine, greciaVinhosZacharias, portugalVinhos } from "../constants/BD";
 
 export default function SideBar({
+  setGreciaListDomaine,
+  setGreciaListZacharias,
   setGreciaList,
   setPortugalList,
   setEspanhaList,
@@ -45,8 +47,10 @@ export default function SideBar({
   }
 
   function showBranco() {
-    const grecia = greciaVinhos.filter((g) => g.tipo === "branco");
-    setGreciaList(grecia);
+    const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "branco");
+    setGreciaListDomaine(greciaDomaine);
+    const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "branco");
+    setGreciaListZacharias(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "branco");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "branco");
@@ -54,8 +58,10 @@ export default function SideBar({
   }
 
   function showRose() {
-    const grecia = greciaVinhos.filter((g) => g.tipo === "rose");
-    setGreciaList(grecia);
+    const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "rose");
+    setGreciaListDomaine(greciaDomaine);
+    const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "rose");
+    setGreciaListDomaine(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "rose");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "rose");
@@ -63,8 +69,10 @@ export default function SideBar({
   }
 
   function showTinto() {
-    const grecia = greciaVinhos.filter((g) => g.tipo === "tinto");
-    setGreciaList(grecia);
+    const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "tinto");
+    setGreciaListDomaine(greciaDomaine);
+    const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "tinto");
+    setGreciaListDomaine(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "tinto");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "tinto");
@@ -72,28 +80,30 @@ export default function SideBar({
   }
 
   function showEspumante() {
-    const grecia = greciaVinhos.filter((g) => g.tipo === "espumante");
-    setGreciaList(grecia);
+    const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "espumante");
+    setGreciaListDomaine(greciaDomaine);
+    const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "espumante");
+    setGreciaListDomaine(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "espumante");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "espumante");
     setEspanhaList(espanha);
   }
 
-  function showAgiorgitiko() {
-    const agiogirtikoG = greciaVinhos.filter((g) =>
-      g.uvas.includes("Agiogirtiko")
-    );
-    setGreciaList(agiogirtikoG);
-    const agiogirtikoP = portugalVinhos.filter((g) =>
-      g.uvas.includes("Agiogirtiko")
-    );
-    setPortugalList(agiogirtikoP);
-    const agiogirtikoE = espanhaVinhos.filter((g) =>
-      g.uvas.includes("Agiogirtiko")
-    );
-    setEspanhaList(agiogirtikoE);
-  }
+  // function showAgiorgitiko() {
+  //   const agiogirtikoG = greciaVinhos.filter((g) =>
+  //     g.uvas.includes("Agiogirtiko")
+  //   );
+  //   setGreciaList(agiogirtikoG);
+  //   const agiogirtikoP = portugalVinhos.filter((g) =>
+  //     g.uvas.includes("Agiogirtiko")
+  //   );
+  //   setPortugalList(agiogirtikoP);
+  //   const agiogirtikoE = espanhaVinhos.filter((g) =>
+  //     g.uvas.includes("Agiogirtiko")
+  //   );
+  //   setEspanhaList(agiogirtikoE);
+  // }
 
   return (
     <>
@@ -112,7 +122,7 @@ export default function SideBar({
           <Opcao onClick={() => setTimeout(showEspumante, 100)}>
             Espumante
           </Opcao>
-          <h1>tipos de uva</h1>
+          {/* <h1>tipos de uva</h1>
           <Opcao onClick={() => showAgiorgitiko}>Agiorgitiko</Opcao>
           <Opcao>Aragonez</Opcao>
           <Opcao>Arinto</Opcao>
@@ -133,7 +143,7 @@ export default function SideBar({
           <Opcao>Viognier</Opcao>
           <Opcao>Verdelho</Opcao>
           <Opcao>Vinhas Velhas</Opcao>
-          <Opcao>Xarel.lo</Opcao>
+          <Opcao>Xarel.lo</Opcao> */}
         </Opcoes>
       </OpcoesMenu>
     </>

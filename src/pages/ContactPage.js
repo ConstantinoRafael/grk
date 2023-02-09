@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import WhatsappButton from "../components/WhatsappButton";
 
-export function ContactPage() {
+export default function ContactPage() {
   return (
     <>
       <Header>Contato</Header>
