@@ -42,81 +42,6 @@ import zachariasMoschofileroBio from "../assets/images/produtos/zacharias-moscho
 import zachariasNemea from "../assets/images/produtos/zacharias-nemea.png";
 import zachariasRoseBio from "../assets/images/produtos/zacharias-rose-bio.png";
 
-// export const products = [
-//   {
-//     id: 1,
-//     nome: "TERRAS DO MONTE BRANCO",
-//     image: terrasDoMonte,
-//     tipo: "branco",
-//     pais: "Portugal",
-//     produtora: "Condado Portucalense",
-//     região: "Lisboa",
-//     uvas: "Vital, Malvasia Rui e Fernão Pires",
-//     safra: 2021,
-//     harmonizacao: "Peixes e grelhados, frutas e queijos brancos.",
-//     notas:
-//       "Vinho de cor amarela palha, de aspecto cristalino com aroma cítrico e pera madura. Sabores frescos e frutados na boca, final persistente.",
-//   },
-//   {
-//     id: 2,
-//     nome: "INSTINTO FORTE BRANCO",
-//     image: instintoForteBranco,
-//     tipo: "branco",
-//     pais: "Portugal",
-//     produtora: "Condado Portucalense",
-//     região: "Lisboa",
-//     uvas: "Fernão Pires, Arinto e Seara Nova",
-//     safra: 2021,
-//     harmonizacao: "Saladas, frutos do mar, carnes brancas.",
-//     notas:
-//       "Vinho branco de cor citrina, jovem e frutado com final de boca persistente e fresco.",
-//   },
-//   {
-//     id: 3,
-//     nome: "TERRAS DO MONTE TINTO",
-//     image: terrasDoMonteTinto,
-//     tipo: "tinto",
-//     pais: "Portugal",
-//     produtora: "Condado Portucalense",
-//     região: "Lisboa",
-//     uvas: "Aragonez, Caladoc e Carignan",
-//     safra: 2021,
-//     harmonizacao:
-//       "Carne vermelha, Sorrentinos, molho vermelho e massas no geral.",
-//     notas:
-//       "Vinho de cor vermelha intensa, elaborada a partir das melhores castas, possui aromas harmoniosos, distintos e marcantes, sabores suculentos e frutados.",
-//   },
-//   {
-//     id: 4,
-//     nome: "THALASSA WHITE",
-//     image: thalassaWhite,
-//     tipo: "branco",
-//     pais: "Grécia",
-//     produtora: "Domaine Costa Lazaridi",
-//     região: "Drama",
-//     uvas: "100% chardonnay",
-//     safra: 2019,
-//     harmonizacao: "Peixes grelhados, queijos brancos e saladas.",
-//     notas:
-//       "De coloração amarelo brilhante, aroma de frutas cítricas e tropicais com nuances florais. Na boca, toque macio e aveludado, boa acidez e final persistente.",
-//   },
-//   {
-//     id: 5,
-//     nome: "OKEANOS ASSYRTIKO CHARDONNAY",
-//     image: okeanosAssyrtikoChardonnay,
-//     tipo: "branco",
-//     pais: "Grécia",
-//     produtora: "Domaine Costa Lazaridi",
-//     região: "Drama",
-//     uvas: "Assyrtiko, Chardonnay",
-//     safra: 2019,
-//     harmonizacao:
-//       "Saladas, petiscos e pratos frescos ou grelhados à base de frutos do mar. Carpaccios e alguns embutidos também são boas opções.",
-//     notas:
-//       "De coloração amarelo palha brilhante com reflexos esverdeados. Aromas florais e de frutas cítricas, com toque mineral. Agradável acidez e frescor, com destaque para um sutil toque de nozes.",
-//   },
-// ];
-
 export const greciaVinhosDomaine = [
   {
     id: 1,
@@ -762,8 +687,11 @@ export const greciaVinhos = [
     notas:
       "De coloração vemelho intenso com toques violáceos. Intenso e rico biquê aromático, com toques de frutas negras maduras, tabaco, madeira elegante, cacau e uma leve e bem-vinda lembrança de hortelã. Paladar de frutos maduros em compotas, seguido de toques apimentados e chocolate. Madeira presente e quilibrada.",
   },
+];
+
+export const destilados = [
   {
-    id: 15,
+    id: 1,
     nome: "IDONIKO TSIPOURO",
     image: idonikoTsipouro,
     tipo: "",
@@ -778,7 +706,7 @@ export const greciaVinhos = [
       "De coloração transparente e límpido, excelente chegada aromática, rico com fundo de flor de laranja. O caracter frutado de castas cuidadosamente selecionadas.",
   },
   {
-    id: 16,
+    id: 2,
     nome: "IDONIKO OUZO",
     image: idonikoOuzo,
     tipo: "",
@@ -788,11 +716,11 @@ export const greciaVinhos = [
     uvas: "",
     desc: "Oferece aos consumidores uma experiência excepcional, por ser um Ouzo de alta qualidade e personalidade. Seu processo é o mais lente e de maior valor, com 100% da destilação em alambiques de cobre, diferente do usual.",
     harmonizacao:
-      "CCom aperitivos, com sobremesas refrescantes à base de frutas e para finalizar uma boa refeição.",
+      "Com aperitivos, com sobremesas refrescantes à base de frutas e para finalizar uma boa refeição.",
     notas:
       "De coloração transparente e límpido, fica leitoso na adição de água ou gelo. Elegante presença de anis com um discrto toque de mastique cítrico, me",
   },
-];
+]
 
 export const portugalVinhos = [
   {

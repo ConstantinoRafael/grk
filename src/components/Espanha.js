@@ -47,6 +47,7 @@ const LinhaHorizontal = styled.div`
 const PhotosList = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const EachWine = styled.div`
@@ -90,7 +91,7 @@ const Subtitle = styled.div`
   margin: auto;
   text-align: center;
 
-  @media (max-width: 768px;) {
+  @media (max-width: 768px) {
     height: 20px;
   }
 `;

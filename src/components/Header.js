@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/images/logo-branco-grk.png";
 
-
 export default function Header() {
   return (
     <HeaderStyles>
@@ -13,9 +12,11 @@ export default function Header() {
         <p>vinhos</p>
       </Link>
       <Link to={"/"}>
-      <img src={logo} alt="logo grk" />
+        <img src={logo} alt="logo grk" />
       </Link>
-      <p>destilados</p>
+      <Link to={"/destilados"}>
+        <p>destilados</p>
+      </Link>
       <Link to={"/contato"}>
         <p>contato</p>
       </Link>
@@ -26,8 +27,8 @@ export default function Header() {
 const HeaderStyles = styled.div`
   height: 200px;
   width: auto;
-  background-color: #56A6E1;
- 
+  background-color: #56a6e1;
+
   display: flex;
   align-items: center;
   justify-content: space-around;

@@ -9,39 +9,47 @@ import {
 } from "../constants/BD";
 import { IoIosArrowDown, IoIosArrowUp, IoIosClose } from "react-icons/io";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SideBarMobile({
   setGreciaListDomaine,
   setGreciaListZacharias,
-  setGreciaList,
   setPortugalList,
   setEspanhaList,
   setShowMenu,
 }) {
   const [menuVinhos, setMenuVinhos] = useState(false);
 
+  const navigate = useNavigate();
   function showGrecia() {
-    setGreciaList(greciaVinhos);
+    navigate("/vinhos");
+    setGreciaListDomaine(greciaVinhosDomaine);
+    setGreciaListZacharias(greciaVinhosZacharias);
     setPortugalList([]);
     setEspanhaList([]);
     setShowMenu(false);
   }
 
   function showPortugal() {
-    setGreciaList([]);
+    navigate("/vinhos");
+    setGreciaListDomaine([]);
+    setGreciaListZacharias([]);
     setPortugalList(portugalVinhos);
     setEspanhaList([]);
     setShowMenu(false);
   }
 
   function showEspanha() {
-    setGreciaList([]);
+    navigate("/vinhos");
+    setGreciaListDomaine([]);
+    setGreciaListZacharias([]);
     setPortugalList([]);
     setEspanhaList(espanhaVinhos);
     setShowMenu(false);
   }
 
   function showBranco() {
+    navigate("/vinhos");
     const greciaDomaine = greciaVinhosDomaine.filter(
       (g) => g.tipo === "branco"
     );
@@ -58,6 +66,7 @@ export default function SideBarMobile({
   }
 
   function showRose() {
+    navigate("/vinhos");
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "rose");
     setGreciaListDomaine(greciaDomaine);
     const greciaZacharias = greciaVinhosZacharias.filter(
@@ -72,6 +81,7 @@ export default function SideBarMobile({
   }
 
   function showTinto() {
+    navigate("/vinhos");
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "tinto");
     setGreciaListDomaine(greciaDomaine);
     const greciaZacharias = greciaVinhosZacharias.filter(
@@ -86,6 +96,7 @@ export default function SideBarMobile({
   }
 
   function showEspumante() {
+    navigate("/vinhos");
     const greciaDomaine = greciaVinhosDomaine.filter(
       (g) => g.tipo === "espumante"
     );
@@ -218,14 +229,17 @@ export default function SideBarMobile({
           </Secao>
           <Espacinho></Espacinho>
           <Secao>
-            <TituloOpcoes>
-              <p>destilados</p>
-              <IoIosArrowDown />
-            </TituloOpcoes>
+            <Link to={"/destilados"}>
+              <TituloOpcoes>
+                <p>destilados</p>
+              </TituloOpcoes>
+            </Link>
           </Secao>
           <Espacinho></Espacinho>
           <Secao>
-            <TituloOpcoes>contato</TituloOpcoes>
+            <Link to={"/contato"}>
+              <TituloOpcoes>contato</TituloOpcoes>
+            </Link>
           </Secao>
         </OpcoesMenu>
       </Menu>
@@ -233,7 +247,11 @@ export default function SideBarMobile({
   );
 }
 
-const Secao = styled.div``;
+const Secao = styled.div`
+  a {
+    text-decoration: none;
+  }
+`;
 
 const FundoTransparente = styled.div`
   position: fixed;

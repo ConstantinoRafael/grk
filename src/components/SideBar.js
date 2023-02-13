@@ -5,7 +5,6 @@ import { espanhaVinhos, greciaVinhos, greciaVinhosDomaine, greciaVinhosZacharias
 export default function SideBar({
   setGreciaListDomaine,
   setGreciaListZacharias,
-  setGreciaList,
   setPortugalList,
   setEspanhaList,
 }) {
@@ -36,6 +35,7 @@ export default function SideBar({
   }
 
   function showPortugal() {
+    navigate("/vinhos");
     setGreciaListDomaine([]);
     setGreciaListZacharias([]);
     setPortugalList(portugalVinhos);
@@ -51,6 +51,7 @@ export default function SideBar({
   }
 
   function showBranco() {
+    navigate("/vinhos");
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "branco");
     setGreciaListDomaine(greciaDomaine);
     const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "branco");
@@ -62,6 +63,7 @@ export default function SideBar({
   }
 
   function showRose() {
+    navigate("/vinhos");
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "rose");
     setGreciaListDomaine(greciaDomaine);
     const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "rose");
@@ -75,6 +77,7 @@ export default function SideBar({
   }
 
   function showTinto() {
+    navigate("/vinhos");
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "tinto");
     setGreciaListDomaine(greciaDomaine);
     const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "tinto");
@@ -86,6 +89,7 @@ export default function SideBar({
   }
 
   function showEspumante() {
+    navigate("/vinhos");
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "espumante");
     setGreciaListDomaine(greciaDomaine);
     const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "espumante");

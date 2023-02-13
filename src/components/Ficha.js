@@ -9,9 +9,22 @@ import {
 } from "../constants/BD";
 import WhatsappButton from "./WhatsappButton";
 import styled from "styled-components";
+import { useState } from "react";
+import SideBarMobile from "./SideBarMobile";
+import HeaderMobile from "./HeaderMobile";
 
 export default function Ficha() {
   const { name } = useParams();
+
+  const [greciaListDomaine, setGreciaListDomaine] =
+    useState(greciaVinhosDomaine);
+  const [greciaListZacharias, setGreciaListZacharias] = useState(
+    greciaVinhosZacharias
+  );
+
+  const [portugalList, setPortugalList] = useState(portugalVinhos);
+  const [espanhaList, setEspanhaList] = useState(espanhaVinhos);
+  const [showMenu, setShowMenu] = useState(false);
 
   let vinho;
 
@@ -39,10 +52,47 @@ export default function Ficha() {
   return (
     <>
       <WhatsappButton />
-      <Header></Header>
-      <FichaToda>
-        <SideBar></SideBar>
 
+      <HeaderDiv>
+        <Header />
+      </HeaderDiv>
+
+      <HeaderDivMobile>
+        <HeaderMobile setShowMenu={setShowMenu} />
+      </HeaderDivMobile>
+
+      <WhatsappButton />
+      {showMenu ? (
+        <SideBarMobileDiv>
+          <SideBarMobile
+            greciaListDomaine={greciaListDomaine}
+            setGreciaListDomaine={setGreciaListDomaine}
+            greciaListZacharias={greciaListZacharias}
+            setGreciaListZacharias={setGreciaListZacharias}
+            portugalList={portugalList}
+            setPortugalList={setPortugalList}
+            espanhaList={espanhaList}
+            setEspanhaList={setEspanhaList}
+            setShowMenu={setShowMenu}
+          />
+        </SideBarMobileDiv>
+      ) : (
+        ""
+      )}
+
+      <FichaToda>
+        <SideBarDiv>
+          <SideBar
+            greciaListDomaine={greciaListDomaine}
+            setGreciaListDomaine={setGreciaListDomaine}
+            greciaListZacharias={greciaListZacharias}
+            setGreciaListZacharias={setGreciaListZacharias}
+            portugalList={portugalList}
+            setPortugalList={setPortugalList}
+            espanhaList={espanhaList}
+            setEspanhaList={setEspanhaList}
+          />
+        </SideBarDiv>
         <Fichinha>
           <h1>{vinho[0].nome}</h1>
 
@@ -113,3 +163,31 @@ const Dados = styled.div`
 const FotoEDados = styled.div`
   display: flex;
 `;
+
+const HeaderDiv = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const HeaderDivMobile = styled.div`
+  @media (min-width: 769px) {
+    display: none;
+  }
+`;
+
+const WineList = styled.div`
+  display: flex;
+`;
+
+const SideBarDiv = styled.div`
+  height: auto;
+  width: 15%;
+  background-color: #e1ecf4;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const SideBarMobileDiv = styled.div``;
