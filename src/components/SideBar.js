@@ -29,19 +29,23 @@ export default function SideBar({
 
   function showGrecia() {
     navigate("/vinhos");
-    setGreciaList(greciaVinhos);
+    setGreciaListDomaine(greciaVinhosDomaine);
+    setGreciaListZacharias(greciaVinhosZacharias);
     setPortugalList([]);
     setEspanhaList([]);
   }
 
   function showPortugal() {
-    setGreciaList([]);
+    setGreciaListDomaine([]);
+    setGreciaListZacharias([]);
     setPortugalList(portugalVinhos);
     setEspanhaList([]);
   }
 
   function showEspanha() {
-    setGreciaList([]);
+    navigate("/vinhos")
+    setGreciaListDomaine([]);
+    setGreciaListZacharias([]);
     setPortugalList([]);
     setEspanhaList(espanhaVinhos);
   }
@@ -61,7 +65,9 @@ export default function SideBar({
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "rose");
     setGreciaListDomaine(greciaDomaine);
     const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "rose");
-    setGreciaListDomaine(greciaZacharias);
+
+    console.log(greciaZacharias)
+    setGreciaListZacharias(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "rose");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "rose");
@@ -72,7 +78,7 @@ export default function SideBar({
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "tinto");
     setGreciaListDomaine(greciaDomaine);
     const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "tinto");
-    setGreciaListDomaine(greciaZacharias);
+    setGreciaListZacharias(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "tinto");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "tinto");
@@ -83,7 +89,7 @@ export default function SideBar({
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "espumante");
     setGreciaListDomaine(greciaDomaine);
     const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "espumante");
-    setGreciaListDomaine(greciaZacharias);
+    setGreciaListZacharias(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "espumante");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "espumante");

@@ -1,10 +1,18 @@
 import styled from "styled-components";
 import logoAzul from "../assets/images/logo-azul.png";
-import { espanhaVinhos, greciaVinhos, portugalVinhos } from "../constants/BD";
+import {
+  espanhaVinhos,
+  greciaVinhos,
+  greciaVinhosDomaine,
+  greciaVinhosZacharias,
+  portugalVinhos,
+} from "../constants/BD";
 import { IoIosArrowDown, IoIosArrowUp, IoIosClose } from "react-icons/io";
 import { useState } from "react";
 
 export default function SideBarMobile({
+  setGreciaListDomaine,
+  setGreciaListZacharias,
   setGreciaList,
   setPortugalList,
   setEspanhaList,
@@ -34,8 +42,14 @@ export default function SideBarMobile({
   }
 
   function showBranco() {
-    const grecia = greciaVinhos.filter((g) => g.tipo === "branco");
-    setGreciaList(grecia);
+    const greciaDomaine = greciaVinhosDomaine.filter(
+      (g) => g.tipo === "branco"
+    );
+    setGreciaListDomaine(greciaDomaine);
+    const greciaZacharias = greciaVinhosZacharias.filter(
+      (g) => g.tipo === "branco"
+    );
+    setGreciaListZacharias(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "branco");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "branco");
@@ -44,8 +58,12 @@ export default function SideBarMobile({
   }
 
   function showRose() {
-    const grecia = greciaVinhos.filter((g) => g.tipo === "rose");
-    setGreciaList(grecia);
+    const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "rose");
+    setGreciaListDomaine(greciaDomaine);
+    const greciaZacharias = greciaVinhosZacharias.filter(
+      (g) => g.tipo === "rose"
+    );
+    setGreciaListDomaine(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "rose");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "rose");
@@ -54,8 +72,12 @@ export default function SideBarMobile({
   }
 
   function showTinto() {
-    const grecia = greciaVinhos.filter((g) => g.tipo === "tinto");
-    setGreciaList(grecia);
+    const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "tinto");
+    setGreciaListDomaine(greciaDomaine);
+    const greciaZacharias = greciaVinhosZacharias.filter(
+      (g) => g.tipo === "tinto"
+    );
+    setGreciaListDomaine(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "tinto");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "tinto");
@@ -64,8 +86,14 @@ export default function SideBarMobile({
   }
 
   function showEspumante() {
-    const grecia = greciaVinhos.filter((g) => g.tipo === "espumante");
-    setGreciaList(grecia);
+    const greciaDomaine = greciaVinhosDomaine.filter(
+      (g) => g.tipo === "espumante"
+    );
+    setGreciaListDomaine(greciaDomaine);
+    const greciaZacharias = greciaVinhosZacharias.filter(
+      (g) => g.tipo === "espumante"
+    );
+    setGreciaListDomaine(greciaZacharias);
     const portugal = portugalVinhos.filter((p) => p.tipo === "espumante");
     setPortugalList(portugal);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "espumante");
@@ -296,9 +324,9 @@ const Opcao = styled.div`
 `;
 
 const Espacinho = styled.div`
-    height: 1px;
-    background-color: #ffffff;
-`
+  height: 1px;
+  background-color: #ffffff;
+`;
 
 // const Form = styled.form`
 //   display: flex;
