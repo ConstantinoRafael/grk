@@ -1,11 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { espanhaVinhos, greciaVinhos, greciaVinhosDomaine, greciaVinhosZacharias, portugalVinhos } from "../constants/BD";
+import {
+  espanhaVinhos,
+  greciaVinhosDomaine,
+  greciaVinhosZacharias,
+  portugalVinhos,
+  portugalVinhosCondado,
+  portugalVinhosHedade,
+  portugalVinhosVale,
+} from "../constants/BD";
 
 export default function SideBar({
   setGreciaListDomaine,
   setGreciaListZacharias,
-  setPortugalList,
+  setPortugalListCondado,
+  setPortugalListHedade,
+  setPortugalListVale,
   setEspanhaList,
 }) {
   const navigate = useNavigate();
@@ -30,7 +40,9 @@ export default function SideBar({
     navigate("/vinhos");
     setGreciaListDomaine(greciaVinhosDomaine);
     setGreciaListZacharias(greciaVinhosZacharias);
-    setPortugalList([]);
+    setPortugalListCondado([]);
+    setPortugalListHedade([]);
+    setPortugalListVale([]);
     setEspanhaList([]);
   }
 
@@ -38,26 +50,42 @@ export default function SideBar({
     navigate("/vinhos");
     setGreciaListDomaine([]);
     setGreciaListZacharias([]);
-    setPortugalList(portugalVinhos);
+    setPortugalListCondado(portugalVinhosCondado);
+    setPortugalListHedade(portugalVinhosHedade);
+    setPortugalListVale(portugalVinhosVale);
     setEspanhaList([]);
   }
 
   function showEspanha() {
-    navigate("/vinhos")
+    navigate("/vinhos");
     setGreciaListDomaine([]);
     setGreciaListZacharias([]);
-    setPortugalList([]);
+    setPortugalListCondado([]);
+    setPortugalListHedade([]);
+    setPortugalListVale([]);
     setEspanhaList(espanhaVinhos);
   }
 
   function showBranco() {
     navigate("/vinhos");
-    const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "branco");
+    const greciaDomaine = greciaVinhosDomaine.filter(
+      (g) => g.tipo === "branco"
+    );
     setGreciaListDomaine(greciaDomaine);
-    const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "branco");
+    const greciaZacharias = greciaVinhosZacharias.filter(
+      (g) => g.tipo === "branco"
+    );
     setGreciaListZacharias(greciaZacharias);
-    const portugal = portugalVinhos.filter((p) => p.tipo === "branco");
-    setPortugalList(portugal);
+    const portugalCondado = portugalVinhosCondado.filter(
+      (p) => p.tipo === "branco"
+    );
+    setPortugalListCondado(portugalCondado);
+    const portugalHedade = portugalVinhosHedade.filter(
+      (p) => p.tipo === "branco"
+    );
+    setPortugalListHedade(portugalHedade);
+    const portugalVale = portugalVinhosVale.filter((p) => p.tipo === "branco");
+    setPortugalListVale(portugalVale);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "branco");
     setEspanhaList(espanha);
   }
@@ -66,12 +94,22 @@ export default function SideBar({
     navigate("/vinhos");
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "rose");
     setGreciaListDomaine(greciaDomaine);
-    const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "rose");
+    const greciaZacharias = greciaVinhosZacharias.filter(
+      (g) => g.tipo === "rose"
+    );
 
-    console.log(greciaZacharias)
+    console.log(greciaZacharias);
     setGreciaListZacharias(greciaZacharias);
-    const portugal = portugalVinhos.filter((p) => p.tipo === "rose");
-    setPortugalList(portugal);
+    const portugalCondado = portugalVinhosCondado.filter(
+      (p) => p.tipo === "rose"
+    );
+    setPortugalListCondado(portugalCondado);
+    const portugalHedade = portugalVinhosHedade.filter(
+      (p) => p.tipo === "rose"
+    );
+    setPortugalListHedade(portugalHedade);
+    const portugalVale = portugalVinhosVale.filter((p) => p.tipo === "rose");
+    setPortugalListVale(portugalVale);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "rose");
     setEspanhaList(espanha);
   }
@@ -80,22 +118,46 @@ export default function SideBar({
     navigate("/vinhos");
     const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "tinto");
     setGreciaListDomaine(greciaDomaine);
-    const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "tinto");
+    const greciaZacharias = greciaVinhosZacharias.filter(
+      (g) => g.tipo === "tinto"
+    );
     setGreciaListZacharias(greciaZacharias);
-    const portugal = portugalVinhos.filter((p) => p.tipo === "tinto");
-    setPortugalList(portugal);
+    const portugalCondado = portugalVinhosCondado.filter(
+      (p) => p.tipo === "tinto"
+    );
+    setPortugalListCondado(portugalCondado);
+    const portugalHedade = portugalVinhosHedade.filter(
+      (p) => p.tipo === "tinto"
+    );
+    setPortugalListHedade(portugalHedade);
+    const portugalVale = portugalVinhosVale.filter((p) => p.tipo === "tinto");
+    setPortugalListVale(portugalVale);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "tinto");
     setEspanhaList(espanha);
   }
 
   function showEspumante() {
     navigate("/vinhos");
-    const greciaDomaine = greciaVinhosDomaine.filter((g) => g.tipo === "espumante");
+    const greciaDomaine = greciaVinhosDomaine.filter(
+      (g) => g.tipo === "espumante"
+    );
     setGreciaListDomaine(greciaDomaine);
-    const greciaZacharias = greciaVinhosZacharias.filter((g) => g.tipo === "espumante");
+    const greciaZacharias = greciaVinhosZacharias.filter(
+      (g) => g.tipo === "espumante"
+    );
     setGreciaListZacharias(greciaZacharias);
-    const portugal = portugalVinhos.filter((p) => p.tipo === "espumante");
-    setPortugalList(portugal);
+    const portugalCondado = portugalVinhosCondado.filter(
+      (p) => p.tipo === "espumante"
+    );
+    setPortugalListCondado(portugalCondado);
+    const portugalHedade = portugalVinhosHedade.filter(
+      (p) => p.tipo === "espumante"
+    );
+    setPortugalListHedade(portugalHedade);
+    const portugalVale = portugalVinhosVale.filter(
+      (p) => p.tipo === "espumante"
+    );
+    setPortugalListVale(portugalVale);
     const espanha = espanhaVinhos.filter((e) => e.tipo === "espumante");
     setEspanhaList(espanha);
   }

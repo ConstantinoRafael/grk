@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Espanha({ espanhaList }) {
@@ -15,15 +16,21 @@ export default function Espanha({ espanhaList }) {
         apreciadores. Apresentamos a Cava Trias Battle, D.O. Penedés,
         selecionada de forma especial para encantar e surpreender.
       </h2>
+
+      <Produtora>
+        <h3>Trias Batlle</h3>
+      </Produtora>
       <PhotosList>
         {espanhaList.map((e, i) => (
           <div key={i}>
+            <Link to={`/vinhos/${e.url}`} >
             <EachWine>
               <img src={e.image} alt="foto da garrafa" />
               <Subtitle>
                 <p>{e.nome}</p>
               </Subtitle>
             </EachWine>
+            </Link>
           </div>
         ))}
       </PhotosList>
@@ -93,5 +100,21 @@ const Subtitle = styled.div`
 
   @media (max-width: 768px) {
     height: 20px;
+  }
+`;
+
+const Produtora = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 40px;
+  background-color: #44a3ab;
+  margin-bottom: 20px;
+
+  h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 20px;
   }
 `;

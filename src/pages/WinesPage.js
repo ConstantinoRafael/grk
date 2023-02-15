@@ -9,15 +9,30 @@ import Portugal from "../components/Portugal";
 import SideBar from "../components/SideBar";
 import SideBarMobile from "../components/SideBarMobile";
 import WhatsappButton from "../components/WhatsappButton";
-import { espanhaVinhos, greciaVinhos, greciaVinhosDomaine, greciaVinhosZacharias, portugalVinhos } from "../constants/BD";
+import {
+  espanhaVinhos,
+  greciaVinhos,
+  greciaVinhosDomaine,
+  greciaVinhosZacharias,
+  portugalVinhos,
+  portugalVinhosCondado,
+  portugalVinhosHedade,
+  portugalVinhosVale,
+} from "../constants/BD";
 
 export default function WinesPage() {
   const [greciaListDomaine, setGreciaListDomaine] =
     useState(greciaVinhosDomaine);
-    const [greciaListZacharias, setGreciaListZacharias] =
-    useState(greciaVinhosZacharias);
+  const [greciaListZacharias, setGreciaListZacharias] = useState(
+    greciaVinhosZacharias
+  );
   const [greciaList, setGreciaList] = useState(greciaVinhos);
-  const [portugalList, setPortugalList] = useState(portugalVinhos);
+  const [portugalListCondado, setPortugalListCondado] = useState(
+    portugalVinhosCondado
+  );
+  const [portugalListHedade, setPortugalListHedade] =
+    useState(portugalVinhosHedade);
+  const [portugalListVale, setPortugalListVale] = useState(portugalVinhosVale);
   const [espanhaList, setEspanhaList] = useState(espanhaVinhos);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -41,8 +56,12 @@ export default function WinesPage() {
             setGreciaListZacharias={setGreciaListZacharias}
             greciaList={greciaList}
             setGreciaList={setGreciaList}
-            portugalList={portugalList}
-            setPortugalList={setPortugalList}
+            portugalListCondado={portugalListCondado}
+            setPortugalListCondado={setPortugalListCondado}
+            portugalListHedade={portugalListHedade}
+            setPortugalListHedade={setPortugalListHedade}
+            portugalListVale={portugalListVale}
+            setPortugalListVale={setPortugalListVale}
             espanhaList={espanhaList}
             setEspanhaList={setEspanhaList}
             setShowMenu={setShowMenu}
@@ -61,8 +80,12 @@ export default function WinesPage() {
             setGreciaListZacharias={setGreciaListZacharias}
             greciaList={greciaList}
             setGreciaList={setGreciaList}
-            portugalList={portugalList}
-            setPortugalList={setPortugalList}
+            portugalListCondado={portugalListCondado}
+            setPortugalListCondado={setPortugalListCondado}
+            portugalListHedade={portugalListHedade}
+            setPortugalListHedade={setPortugalListHedade}
+            portugalListVale={portugalListVale}
+            setPortugalListVale={setPortugalListVale}
             espanhaList={espanhaList}
             setEspanhaList={setEspanhaList}
           />
@@ -70,7 +93,8 @@ export default function WinesPage() {
 
         <PaisList>
           <PaisWines>
-            {greciaList.length !== 0 ? (
+            {greciaListDomaine.length !== 0 ||
+            greciaListZacharias.length !== 0 ? (
               <Grecia
                 greciaListDomaine={greciaListDomaine}
                 greciaListZacharias={greciaListZacharias}
@@ -81,8 +105,14 @@ export default function WinesPage() {
             )}
           </PaisWines>
           <PaisWines>
-            {portugalList.length !== 0 ? (
-              <Portugal portugalList={portugalList} />
+            {portugalListCondado.length !== 0 ||
+            portugalListHedade.length !== 0 ||
+            portugalListVale.length !== 0 ? (
+              <Portugal
+                portugalListCondado={portugalListCondado}
+                portugalListHedade={portugalListHedade}
+                portugalListVale={portugalListVale}
+              />
             ) : (
               ""
             )}
@@ -155,7 +185,7 @@ const PaisWines = styled.div`
     line-height: 35px;
   }
 
-  h3{
+  h3 {
     text-align: end;
   }
 

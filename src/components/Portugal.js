@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 //import { portugalList } from "../constants/BD";
 
-export default function Portugal({ portugalList }) {
+export default function Portugal({
+  portugalListCondado,
+  portugalListHedade,
+  portugalListVale,
+}) {
   return (
     <PortugalParte>
       <LinhaHorizontal></LinhaHorizontal>
@@ -17,21 +21,82 @@ export default function Portugal({ portugalList }) {
         muito, o que possibilita uma enorme diversidade de aromas e sabores em
         cada taça.
       </h2>
+      
+
+      {portugalListCondado.length > 0 ? (
+        <Produtora>
+          <h3>Condado Portucalense</h3>
+        </Produtora>
+      ) : (
+        ""
+      )}
+
       <PhotosList>
-        {portugalList.map((p, i) => (
+        {portugalListCondado.map((g, i) => (
           <div key={i}>
-            <Link to={`/vinhos/${p.url}`}>
+            <Link to={`/vinhos/${g.url}`}>
               <EachWine>
-                <img src={p.image} alt="foto da garrafa" />
+                <img src={g.image} alt="foto da garrafa" />
                 <Subtitle>
-                  <p>{p.nome}</p>
+                  <p>{g.nome}</p>
+                </Subtitle>
+              </EachWine>
+            </Link>
+          </div>
+        ))}
+      </PhotosList> 
+
+      {portugalListHedade.length > 0 ? (
+        <Produtora>
+          <h3>Hedade de Medeiros</h3>
+        </Produtora>
+      ) : (
+        ""
+      )}
+
+      <PhotosList>
+        {portugalListHedade.map((g, i) => (
+          <div key={i}>
+            <Link to={`/vinhos/${g.url}`}>
+              <EachWine>
+                <img src={g.image} alt="foto da garrafa" />
+                <Subtitle>
+                  <p>{g.nome}</p>
                 </Subtitle>
               </EachWine>
             </Link>
           </div>
         ))}
       </PhotosList>
+
+      {portugalListVale.length > 0 ? (
+        <Produtora>
+          <h3>Vale da Veiga</h3>
+        </Produtora>
+      ) : (
+        ""
+      )}
+
+      <PhotosList>
+        {portugalListVale.map((g, i) => (
+          <div key={i}>
+            <Link to={`/vinhos/${g.url}`}>
+              <EachWine>
+                <img src={g.image} alt="foto da garrafa" />
+                <Subtitle>
+                  <p>{g.nome}</p>
+                </Subtitle>
+              </EachWine>
+            </Link>
+          </div>
+        ))}
+      </PhotosList>
+
+
+      
     </PortugalParte>
+
+    
   );
 }
 const PortugalParte = styled.div`
@@ -102,5 +167,20 @@ const Subtitle = styled.div`
 
   @media (max-width: 768px) {
     height: 20px;
+  }
+`;
+
+const Produtora = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 40px;
+  background-color: #44a3ab;
+
+  h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 20px;
   }
 `;
